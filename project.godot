@@ -11,8 +11,15 @@ config_version=5
 [application]
 
 config/name="MiniJam184"
+run/main_scene="uid://d0umli82kymlc"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+AudioManager="*res://Autoload/AudioManager/AudioManager.gd"
+InputHandler="*res://Autoload/InputHandler/InputHandler.gd"
+SceneTransition="*res://Autoload/SceneTransition/SceneTransition.gd"
 
 [rendering]
 
