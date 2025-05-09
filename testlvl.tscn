@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://iirf37whlvr1"]
+[gd_scene load_steps=5 format=3 uid="uid://iirf37whlvr1"]
 
 [ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="1_o24vn"]
+[ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="2_jt5j1"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jt5j1"]
 size = Vector2(400, 20)
@@ -12,8 +13,14 @@ size = Vector2(403, 20)
 
 [node name="Player" parent="." instance=ExtResource("1_o24vn")]
 position = Vector2(268, 131)
+speed = 500
+jump_force = -800
+double_jump_force = -700
+gravity = 2400
 
 [node name="tmpfloor" type="StaticBody2D" parent="."]
+position = Vector2(-795, 439)
+scale = Vector2(5.08, 1)
 
 [node name="Sprite2D" type="Sprite2D" parent="tmpfloor"]
 modulate = Color(1, 1, 0, 1)
@@ -23,3 +30,6 @@ texture = SubResource("PlaceholderTexture2D_jt5j1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="tmpfloor"]
 position = Vector2(301, 192)
 shape = SubResource("RectangleShape2D_yiyty")
+
+[node name="MackerellWizard" parent="." instance=ExtResource("2_jt5j1")]
+position = Vector2(1004, 367)
