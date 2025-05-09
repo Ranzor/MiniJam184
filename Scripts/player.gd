@@ -15,9 +15,12 @@ func _physics_process(delta: float) -> void:
 	velocity.x = Input.get_axis("move_left", "move_right") * speed
 	velocity.y += gravity * delta
 	
-	if velocity.x != 0:
+	if velocity.y > 0 and not is_on_floor():
+		$Sprite2D.play("fall")
+	
+	if velocity.x != 0 and is_on_floor():
 		$Sprite2D.play("run")
-	else:
+	elif velocity.x == 0 and is_on_floor():
 		$Sprite2D.play("default")
 		
 	if velocity.x > 0:
@@ -29,10 +32,12 @@ func _physics_process(delta: float) -> void:
 		if is_on_floor():
 			velocity.y = jump_force
 			can_double_jump = true
+			$Sprite2D.play("jump")
 			beat_action("jump")
 		elif can_double_jump:
 			velocity.y = double_jump_force
 			can_double_jump = false
+			$Sprite2D.play("double_jump")
 			beat_action("double_jump")
 			
 	if Input.is_action_just_pressed("duck") and is_on_floor():
