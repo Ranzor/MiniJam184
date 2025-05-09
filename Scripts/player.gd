@@ -14,6 +14,16 @@ var beat_timer = 0.0
 func _physics_process(delta: float) -> void:
 	velocity.x = Input.get_axis("move_left", "move_right") * speed
 	velocity.y += gravity * delta
+	
+	if velocity.x != 0:
+		$Sprite2D.play("run")
+	else:
+		$Sprite2D.play("default")
+		
+	if velocity.x > 0:
+		$Sprite2D.flip_h = false
+	elif velocity.x < 0:
+		$Sprite2D.flip_h = true
 
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
