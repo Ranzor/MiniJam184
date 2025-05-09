@@ -53,8 +53,7 @@ func toggle_visibility(object):
 	animation.play(animation_type + str(object.name))
 
 func _on_new_game_button_pressed():
-	get_tree().change_scene_to_file("res://in_game_ui.tscn")
-	# SceneTransition.transition_to_scene("
+	SceneTransition.transition_to_scene("res://testlvl.tscn")
 
 
 func _on_quit_button_pressed():
