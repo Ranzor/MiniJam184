@@ -4,7 +4,8 @@ extends CharacterBody2D
 @export var jump_force = -400
 @export var double_jump_force = -350
 @export var gravity = 1200
-@export var beat_ms_offset = 0.02
+## We divide the beat inverval by this to get the delay for the beat hit. So hight number = lower delay
+@export var beat_hit_delay = 2
 
 @export var base_damage = 1
 @export var attack_on_beat_multiplier_value = 1.0
@@ -96,9 +97,9 @@ func deal_damage():
 func deal_damage_to_target(target : StaticBody2D):
 	if on_beat:
 		print("Attack on beat!")
-		attack_on_beat_multiplier = increase_attack_bonus()
+		attack_on_beat_multiplier *= increase_attack_bonus()
 	else:
-		attack_on_beat_multiplier = 1
+		attack_on_beat_multiplier = 0
 		attack_on_beat_ramping_value = 0
 		attacks_on_beat = 0
 
@@ -112,8 +113,12 @@ func increase_attack_bonus() -> float:
 
 	if attacks_on_beat % attack_on_beat_ramping_pace == 0:
 		attack_on_beat_ramping_value += attack_on_beat_ramping_increase
+
+	print(str(attacks_on_beat) + ' - ' + str(attack_on_beat_ramping_value) + ' - ' + str(attack_on_beat_multiplier_value))
+
+	attack_on_beat_multiplier = attack_on_beat_multiplier_base + (attack_on_beat_multiplier_value * (attacks_on_beat+attack_on_beat_ramping_value))
 	
-	return (attack_on_beat_multiplier_base + attack_on_beat_ramping_value) * attack_on_beat_multiplier_value
+	return attack_on_beat_ramping_value + attack_on_beat_multiplier_value
 
 
 func beat_action(action_type):
