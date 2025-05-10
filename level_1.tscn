@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bik83ruk8geor" path="res://Art/Environment/environment_foreground_platforms.png" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="3_hn12h"]
 [ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="4_ihfcg"]
-[ext_resource type="PackedScene" uid="uid://dnimiwa5jvmnu" path="res://hp_bar.tscn" id="5_rka8t"]
+[ext_resource type="PackedScene" path="res://hp_bar.tscn" id="5_rka8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(182, 1205)

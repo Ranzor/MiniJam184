@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnimiwa5jvmnu"]
+[gd_scene load_steps=5 format=3 uid="uid://bcmkltd6vhcj1"]
 
 [ext_resource type="Texture2D" uid="uid://mmginp5xf7r5" path="res://Art/UX_Sprite.png" id="1_ybxu1"]
-[ext_resource type="FontFile" uid="uid://cgnt7ittineil" path="res://Art/Fonts/SourceSerif4-VariableFont_opsz,wght.ttf" id="2_ceqaf"]
+[ext_resource type="FontFile" uid="uid://cnxkd2vhp83sj" path="res://Art/Fonts/SourceSerif4-VariableFont_opsz,wght.ttf" id="2_ceqaf"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ceqaf"]
 atlas = ExtResource("1_ybxu1")
@@ -34,6 +34,8 @@ offset_left = 26.0
 offset_top = -55.0
 offset_right = 465.0
 offset_bottom = 4.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("2_ceqaf")
 theme_override_font_sizes/font_size = 42
 text = "Lan Mackarendragoran"
