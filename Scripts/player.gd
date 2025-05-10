@@ -35,13 +35,10 @@ func _ready() -> void:
 
 func on_beat_toggle():
 	on_beat = true
-	print("on_beat")
 	beat += 1
 	if beat > 4:
 		beat = 1
-	print("beat: ", beat)
 	await get_tree().create_timer(beat_interval/2.0).timeout
-	print("off_beat")
 	on_beat = false
 
 func _physics_process(delta: float) -> void:
@@ -98,12 +95,16 @@ func deal_damage():
 
 func deal_damage_to_target(target : StaticBody2D):
 	if on_beat:
+		print("Attack on beat!")
 		attack_on_beat_multiplier = increase_attack_bonus()
 	else:
 		attack_on_beat_multiplier = 1
 		attack_on_beat_ramping_value = 0
 		attacks_on_beat = 0
 
+	print("Dealing damage to target: ", target.name)
+	print("Attack multiplier: ", attack_on_beat_multiplier)
+	print("Base damage: ", base_damage)
 	target.take_damage(base_damage + attack_on_beat_multiplier)
 	
 func increase_attack_bonus() -> float:
@@ -112,7 +113,7 @@ func increase_attack_bonus() -> float:
 	if attacks_on_beat % attack_on_beat_ramping_pace == 0:
 		attack_on_beat_ramping_value += attack_on_beat_ramping_increase
 	
-	return attack_on_beat_multiplier_base + attack_on_beat_ramping_value
+	return (attack_on_beat_multiplier_base + attack_on_beat_ramping_value) * attack_on_beat_multiplier_value
 
 
 func beat_action(action_type):
