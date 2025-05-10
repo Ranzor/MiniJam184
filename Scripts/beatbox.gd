@@ -7,6 +7,21 @@ signal beat
 var beat_timer = 0.0
 var beat_count = 0
 
+var timer
+var countdown = 60
+
+
+func _ready() -> void:
+	timer = Timer.new()
+	timer.connect("timeout",_on_timer_timeout)
+	timer.set_wait_time(1)
+	add_child(timer)
+	timer.start()
+	
+func _on_timer_timeout():
+	countdown -= 1
+	$Label2.text = str(countdown)
+	
 
 func _process(delta: float) -> void:
 	beat_timer += delta
