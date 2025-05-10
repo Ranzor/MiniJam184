@@ -96,20 +96,18 @@ func deal_damage():
 
 func deal_damage_to_target(target : StaticBody2D):
 	if on_beat:
-		print("Attack on beat!")
 		attack_on_beat_multiplier *= increase_attack_bonus()
 	else:
 		attack_on_beat_multiplier = 0
 		attack_on_beat_ramping_value = 0
 		attacks_on_beat = 0
+		Global.combo = attacks_on_beat
 
-	print("Dealing damage to target: ", target.name)
-	print("Attack multiplier: ", attack_on_beat_multiplier)
-	print("Base damage: ", base_damage)
 	target.take_damage(base_damage + attack_on_beat_multiplier)
 	
 func increase_attack_bonus() -> float:
 	attacks_on_beat += 1
+	Global.combo = attacks_on_beat
 
 	if attacks_on_beat % attack_on_beat_ramping_pace == 0:
 		attack_on_beat_ramping_value += attack_on_beat_ramping_increase
