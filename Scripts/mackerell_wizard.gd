@@ -23,7 +23,6 @@ func _ready() -> void:
 	
 
 func on_beat():
-	print("beat")
 	if current_pattern.is_empty() and Beatbox.beat_count == 2:
 		fire_projectile(LANES.values().pick_random())
 	else:

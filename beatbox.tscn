@@ -9,3 +9,9 @@ script = ExtResource("1_eyr0o")
 offset_right = 40.0
 offset_bottom = 23.0
 text = "0"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1110.0
+offset_right = 1150.0
+offset_bottom = 23.0
+text = "60"
