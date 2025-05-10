@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnimiwa5jvmnu"]
+
+[ext_resource type="Texture2D" uid="uid://mmginp5xf7r5" path="res://Art/UX_Sprite.png" id="1_ybxu1"]
+[ext_resource type="FontFile" uid="uid://cgnt7ittineil" path="res://Art/Fonts/SourceSerif4-VariableFont_opsz,wght.ttf" id="2_ceqaf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceqaf"]
+atlas = ExtResource("1_ybxu1")
+region = Rect2(1167.79, 215.579, 506.612, 43.8017)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57dvl"]
+atlas = ExtResource("1_ybxu1")
+region = Rect2(1167.8, 259, 500.5, 40.7)
+
+[node name="HPBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 506.0
+offset_bottom = 43.0
+scale = Vector2(2.275, 2.275)
+value = 100.0
+texture_under = SubResource("AtlasTexture_ceqaf")
+texture_progress = SubResource("AtlasTexture_57dvl")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -55.0
+offset_right = 465.0
+offset_bottom = 4.0
+theme_override_fonts/font = ExtResource("2_ceqaf")
+theme_override_font_sizes/font_size = 42
+text = "Lan Mackarendragoran"

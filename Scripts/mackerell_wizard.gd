@@ -5,6 +5,7 @@ enum LANES {TOP, HIGH, MID, LOW}
 @export var sphere_mid : PackedScene
 @export var sphere_lrg : PackedScene
 @export var beam_lrg : PackedScene
+@export var player : CharacterBody2D
 
 @export var lane_positions: Dictionary = {
 	LANES.TOP: Vector2(0,0),
@@ -70,4 +71,10 @@ func spawn_in_view(scene: PackedScene, padding: float = 50.0) -> Sprite2D:
 func take_damage(damage: int) -> void:
 	# Handle damage logic here
 	print("Mackerell took damage: ", damage)
+	
+func _process(delta: float) -> void:
+	if player.position.x > position.x:
+		$Sprite2D.flip_h = true
+	else:
+		$Sprite2D.flip_h = false
 	
