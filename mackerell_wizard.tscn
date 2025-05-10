@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://diifm6lqtsxqs"]
+[gd_scene load_steps=13 format=3 uid="uid://diifm6lqtsxqs"]
 
 [ext_resource type="Script" uid="uid://c0hftlrsgxvth" path="res://Scripts/mackerell_wizard.gd" id="1_nre6u"]
 [ext_resource type="PackedScene" uid="uid://7gtbrduojjps" path="res://projectile.tscn" id="2_ke8kv"]

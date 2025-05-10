@@ -42,4 +42,5 @@ func _process(delta: float) -> void:
 func reset():
 	countdown = 60
 	beat_count = 0
+	AudioManager.play_sound(preload("res://Audio/devBeat.wav"))
 	timer.start()
