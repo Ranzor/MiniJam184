@@ -666,9 +666,9 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 0
 script = ExtResource("1_fu7sn")
 credits_screen = NodePath("menus/credits")
-continue_game_button = NodePath("menus/menu/menuBackground/MarginContainer/buttonContainer/continueGameButton")
+continue_game_button = NodePath("")
 new_game_button = NodePath("menus/menu/menuBackground/MarginContainer/buttonContainer/newGameButton")
-options_button = NodePath("menus/menu/menuBackground/MarginContainer/buttonContainer/optionsButton")
+options_button = NodePath("")
 quit_button = NodePath("menus/menu/menuBackground/MarginContainer/buttonContainer/quitButton")
 toggle_credits_return_button = NodePath("menus/credits/credits/MarginContainer/exitButton/MarginContainer/toggleCreditsButton")
 toggle_credits_open_button = NodePath("creditsButton/toggleCreditsButton")
@@ -732,18 +732,6 @@ theme_override_constants/margin_bottom = 0
 layout_mode = 2
 theme_override_constants/separation = 11
 
-[node name="continueGameButton" type="Button" parent="main_menu/menus/menu/menuBackground/MarginContainer/buttonContainer"]
-custom_minimum_size = Vector2(200, 40)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0.172549, 0.262745, 0.203922, 1)
-theme_override_fonts/font = ExtResource("2_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxTexture_06t4h")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_06t4h")
-theme_override_styles/normal = SubResource("StyleBoxTexture_7vrkn")
-text = "Continue"
-
 [node name="newGameButton" type="Button" parent="main_menu/menus/menu/menuBackground/MarginContainer/buttonContainer"]
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
@@ -754,20 +742,7 @@ theme_override_fonts/font = ExtResource("2_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_06t4h")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_06t4h")
 theme_override_styles/normal = SubResource("StyleBoxTexture_7vrkn")
-text = "New Game"
-
-[node name="optionsButton" type="Button" parent="main_menu/menus/menu/menuBackground/MarginContainer/buttonContainer"]
-custom_minimum_size = Vector2(200, 40)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_colors/font_color = Color(0.172549, 0.262745, 0.203922, 1)
-theme_override_fonts/font = ExtResource("2_7vrkn")
-theme_override_styles/hover = SubResource("StyleBoxTexture_06t4h")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_06t4h")
-theme_override_styles/normal = SubResource("StyleBoxTexture_7vrkn")
-text = "Help
-"
+text = "RAGE"
 
 [node name="quitButton" type="Button" parent="main_menu/menus/menu/menuBackground/MarginContainer/buttonContainer"]
 custom_minimum_size = Vector2(200, 40)

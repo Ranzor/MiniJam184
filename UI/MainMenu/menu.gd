@@ -14,7 +14,7 @@ var return_buttons: Array
 var credits_buttons
 
 func _ready():
-	main_menu_buttons = [continue_game_button,new_game_button,options_button,quit_button]
+	main_menu_buttons = [new_game_button,quit_button]
 	return_buttons = [toggle_credits_return_button]
 	credits_buttons = [toggle_credits_open_button]
 func _process(delta):
