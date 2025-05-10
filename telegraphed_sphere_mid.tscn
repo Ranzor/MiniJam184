@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8e88qi6pis8s"]
+
+[ext_resource type="Texture2D" uid="uid://byp36vsh0x0uy" path="res://Art/mackerell wizard/mw_beams_telegraphs.png" id="1_ls0ns"]
+[ext_resource type="Texture2D" uid="uid://eedgxnlvpcki" path="res://Art/mackerell wizard/mw_beams_projectiles.png" id="2_eeeqg"]
+[ext_resource type="Script" uid="uid://dkqvjkoejutf4" path="res://Scripts/telegraphed_sphere_mid.gd" id="2_r33p3"]
+
+[node name="Telegraphed_Sphere_Mid" type="Sprite2D"]
+texture = ExtResource("1_ls0ns")
+region_enabled = true
+region_rect = Rect2(82.356, 4.32884, 127.263, 125.211)
+script = ExtResource("2_r33p3")
+tele = ExtResource("1_ls0ns")
+atk = ExtResource("2_eeeqg")

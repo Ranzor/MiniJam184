@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="1_o24vn"]
 [ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="2_jt5j1"]
-[ext_resource type="PackedScene" uid="uid://7gtbrduojjps" path="res://projectile.tscn" id="3_yiyty"]
+[ext_resource type="PackedScene" uid="uid://b8e88qi6pis8s" path="res://telegraphed_sphere_mid.tscn" id="4_dlc0y"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jt5j1"]
 size = Vector2(400, 20)
@@ -55,7 +55,6 @@ shape = SubResource("RectangleShape2D_yiyty")
 [node name="MackerellWizard" parent="." instance=ExtResource("2_jt5j1")]
 z_index = 5
 position = Vector2(585, 940)
-projectile_scene = ExtResource("3_yiyty")
 lane_positions = {
 0: Vector2(2126, 1859),
 1: Vector2(2126, 1099),
@@ -289,3 +288,6 @@ texture = SubResource("PlaceholderTexture2D_242wc")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D6"]
 position = Vector2(-371, 1118)
 shape = SubResource("RectangleShape2D_74aik")
+
+[node name="Telegraphed_Sphere_Mid" parent="." instance=ExtResource("4_dlc0y")]
+position = Vector2(327, 1101)

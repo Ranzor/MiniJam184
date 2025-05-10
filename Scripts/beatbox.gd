@@ -16,11 +16,13 @@ func _ready() -> void:
 	timer.connect("timeout",_on_timer_timeout)
 	timer.set_wait_time(1)
 	add_child(timer)
-	timer.start()
 	
 func _on_timer_timeout():
 	countdown -= 1
 	$Label2.text = str(countdown)
+	if countdown <= 0:
+		SceneTransition.transition_to_scene("res://UI/MainMenu/main_menu.tscn")
+		timer.stop()
 	
 
 func _process(delta: float) -> void:
@@ -32,3 +34,8 @@ func _process(delta: float) -> void:
 			beat_count = 1
 		beat.emit()
 	$Label.text = str(beat_count)
+
+func reset():
+	countdown = 60
+	beat_count = 0
+	timer.start()
