@@ -194,7 +194,7 @@ follow_viewport_enabled = true
 
 [node name="HPBar" parent="CanvasLayer" instance=ExtResource("5_rka8t")]
 offset_left = -765.0
-offset_top = 1563.0
+offset_top = -181.0
 offset_right = -765.0
-offset_bottom = 1563.0
+offset_bottom = -181.0
 scale = Vector2(2.395, 2.395)
