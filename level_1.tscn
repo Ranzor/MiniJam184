@@ -1,12 +1,14 @@
-[gd_scene load_steps=26 format=3 uid="uid://dsoxs44he2su5"]
+[gd_scene load_steps=30 format=3 uid="uid://dsoxs44he2su5"]
 
 [ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="1_3hls8"]
-[ext_resource type="Script" path="res://GamaManager.gd" id="1_j7kpp"]
+[ext_resource type="Script" uid="uid://cimcwighlhlmo" path="res://GamaManager.gd" id="1_j7kpp"]
 [ext_resource type="Texture2D" uid="uid://bik83ruk8geor" path="res://Art/Environment/environment_foreground_platforms.png" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="3_hn12h"]
 [ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="4_ihfcg"]
 [ext_resource type="PackedScene" uid="uid://bcmkltd6vhcj1" path="res://hp_bar.tscn" id="5_rka8t"]
-[ext_resource type="Script" path="res://hp_bar.gd" id="7_bjebc"]
+[ext_resource type="Script" uid="uid://b2bng0xchq8ed" path="res://hp_bar.gd" id="7_bjebc"]
+[ext_resource type="PackedScene" uid="uid://c6ex0s5lubu7c" path="res://combo_text.tscn" id="8_5rr72"]
+[ext_resource type="Script" uid="uid://dgfw58o2t0rdb" path="res://combo_text.gd" id="9_gyffv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(182, 1205)
@@ -202,3 +204,12 @@ offset_right = -765.0
 offset_bottom = -181.0
 scale = Vector2(2.395, 2.395)
 script = ExtResource("7_bjebc")
+
+[node name="combo_text" parent="CanvasLayer" instance=ExtResource("8_5rr72")]
+visible = false
+offset_left = -1013.0
+offset_top = 1334.0
+offset_right = -1013.0
+offset_bottom = 1334.0
+scale = Vector2(3, 3)
+script = ExtResource("9_gyffv")
