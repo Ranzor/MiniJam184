@@ -2,7 +2,11 @@
 
 importer="font_data_dynamic"
 type="FontFile"
+<<<<<<< HEAD
 uid="uid://ckc1qw8i1fp4g"
+=======
+uid="uid://d3625aodso157"
+>>>>>>> bc38f05ebd24febcada7409aed7470783f7130d4
 path="res://.godot/imported/SourceSerif4-Italic-VariableFont_opsz,wght.ttf-fcf25301d5342589c8492af7583763b6.fontdata"
 
 [deps]

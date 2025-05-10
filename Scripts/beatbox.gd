@@ -47,6 +47,7 @@ func reset():
 	countdown = 60
 	beat_count = 0
 	audio_position = 0.0
+	total_beats = 0
 	
 	AudioManager.play_music(preload("res://Audio/devBeat.wav"))
 	timer.start()

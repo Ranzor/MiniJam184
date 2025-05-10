@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://dsoxs44he2su5"]
+[gd_scene load_steps=26 format=3 uid="uid://dsoxs44he2su5"]
 
 [ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="1_3hls8"]
 [ext_resource type="Texture2D" uid="uid://bik83ruk8geor" path="res://Art/Environment/environment_foreground_platforms.png" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="3_hn12h"]
 [ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="4_ihfcg"]
+[ext_resource type="PackedScene" uid="uid://dnimiwa5jvmnu" path="res://hp_bar.tscn" id="5_rka8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(182, 1205)
@@ -183,6 +184,13 @@ double_jump_force = -800
 position = Vector2(576, 734)
 zoom = Vector2(0.35, 0.35)
 
-[node name="MackerellWizard" parent="." instance=ExtResource("4_ihfcg")]
+[node name="MackerellWizard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_ihfcg")]
 z_index = 5
 position = Vector2(608, 926)
+player = NodePath("../Player")
+
+[node name="HPBar" parent="." instance=ExtResource("5_rka8t")]
+offset_left = -17.0
+offset_top = 1563.0
+offset_right = -17.0
+offset_bottom = 1563.0
