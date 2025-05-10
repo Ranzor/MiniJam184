@@ -48,14 +48,14 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_yiyty")
 
 [node name="MackerellWizard" parent="." instance=ExtResource("2_jt5j1")]
-z_index = 1
+z_index = 5
 position = Vector2(585, 940)
 projectile_scene = ExtResource("3_yiyty")
 lane_positions = {
-0: Vector2(938, 145),
-1: Vector2(938, 281),
-2: Vector2(938, 412),
-3: Vector2(938, 552)
+0: Vector2(2126, 1859),
+1: Vector2(2126, 1099),
+2: Vector2(2126, 1370),
+3: Vector2(2126, 1586)
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -63,6 +63,7 @@ position = Vector2(576, 734)
 zoom = Vector2(0.35, 0.35)
 
 [node name="Player" parent="." instance=ExtResource("1_o24vn")]
+z_index = 10
 position = Vector2(113, 362)
 speed = 500
 jump_force = -1000

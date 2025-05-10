@@ -5,17 +5,29 @@ extends CharacterBody2D
 @export var double_jump_force = -350
 @export var gravity = 1200
 var can_double_jump = false
+var dir = 1
 
 var beat_timer = 0.0
 @onready var bpm = Beatbox.BPM
 @onready var beat_interval = bpm / 60
 
 var is_attacking = false
+var bounce = false
 
 
 func _physics_process(delta: float) -> void:
-	velocity.x = Input.get_axis("move_left", "move_right") * speed
+	velocity.x = dir * speed
 	velocity.y += gravity * delta
+	
+	if Input.is_action_just_pressed("move_left"):
+		dir = -1
+	elif Input.is_action_just_pressed("move_right"):
+		dir = 1
+	
+	if is_on_wall() and not bounce:
+		_bounce()
+	if not is_on_wall() and bounce:
+		bounce = false
 	
 	if velocity.y > 0 and not is_on_floor() and not is_attacking:
 		$Sprite2D.play("fall")
@@ -59,3 +71,10 @@ func _physics_process(delta: float) -> void:
 func beat_action(action_type):
 	# TODO: Make fancy perfect timing effects
 	return
+	
+func _bounce():
+	bounce = true
+	if dir == 1:
+		dir = -1
+	else:
+		dir = 1
