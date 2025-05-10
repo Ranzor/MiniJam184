@@ -7,7 +7,7 @@ extends CharacterBody2D
 var can_double_jump = false
 
 var beat_timer = 0.0
-@export var bpm = 100
+@onready var bpm = Beatbox.BPM
 @onready var beat_interval = bpm / 60
 
 

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbmp2v26plvtc"]
+
+[ext_resource type="Script" uid="uid://roj8to5038ig" path="res://Scripts/beatbox.gd" id="1_eyr0o"]
+
+[node name="Beatbox" type="Node2D"]
+script = ExtResource("1_eyr0o")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"

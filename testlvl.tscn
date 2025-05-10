@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://iirf37whlvr1"]
+[gd_scene load_steps=6 format=3 uid="uid://iirf37whlvr1"]
 
 [ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="1_o24vn"]
 [ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="2_jt5j1"]
+[ext_resource type="PackedScene" uid="uid://7gtbrduojjps" path="res://projectile.tscn" id="3_yiyty"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jt5j1"]
 size = Vector2(400, 20)
@@ -9,7 +10,7 @@ size = Vector2(400, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yiyty"]
 size = Vector2(403, 20)
 
-[node name="Node2D" type="Node2D"]
+[node name="TESTLVL" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_o24vn")]
 position = Vector2(268, 131)
@@ -33,4 +34,14 @@ shape = SubResource("RectangleShape2D_yiyty")
 
 [node name="MackerellWizard" parent="." instance=ExtResource("2_jt5j1")]
 z_index = 1
-position = Vector2(955, 347)
+position = Vector2(1063, 371)
+projectile_scene = ExtResource("3_yiyty")
+lane_positions = {
+0: Vector2(938, 145),
+1: Vector2(938, 281),
+2: Vector2(938, 412),
+3: Vector2(938, 552)
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 323)

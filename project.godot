@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 AudioManager="*res://Autoload/AudioManager/AudioManager.gd"
 InputHandler="*res://Autoload/InputHandler/InputHandler.gd"
 SceneTransition="*res://Autoload/SceneTransition/SceneTransition.gd"
+Global="*res://Scripts/Global.gd"
+Beatbox="*res://beatbox.tscn"
 
 [input]
 
