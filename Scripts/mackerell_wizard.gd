@@ -21,6 +21,8 @@ func _ready() -> void:
 	
 	$beat_timer.wait_time = beat_interval
 	$beat_timer.start()
+
+	%MackerellArea.mackerell = self
 	
 
 func on_beat():
@@ -54,4 +56,8 @@ func spawn_in_view(scene: PackedScene, padding: float = 50.0) -> Sprite2D:
 	get_parent().add_child(instance)
 	
 	return instance
+	
+func take_damage(damage: int) -> void:
+	# Handle damage logic here
+	print("Mackerell took damage: ", damage)
 	
