@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://diifm6lqtsxqs"]
+[gd_scene load_steps=11 format=3 uid="uid://diifm6lqtsxqs"]
 
 [ext_resource type="Script" uid="uid://c0hftlrsgxvth" path="res://Scripts/mackerell_wizard.gd" id="1_nre6u"]
 [ext_resource type="Texture2D" uid="uid://clgdq1n5ytb5t" path="res://Art/mackerell wizard/mw_idle_0000.png" id="2_nre6u"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c8gje3d7y5hja" path="res://Art/mackerell wizard/mw_idle_0003.png" id="5_x86ss"]
 [ext_resource type="Texture2D" uid="uid://du16smpbmfjat" path="res://Art/mackerell wizard/mw_idle_0004.png" id="6_ktmyw"]
 [ext_resource type="Texture2D" uid="uid://vdh5e26cfu1i" path="res://Art/mackerell wizard/mw_idle_0005.png" id="7_v5hhe"]
+[ext_resource type="Script" uid="uid://mk3ehila12mo" path="res://mackerell_hitbox.gd" id="8_ke8kv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4viln"]
 animations = [{
@@ -37,7 +38,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nre6u"]
 size = Vector2(122, 386)
 
-[node name="MackerellWizard" type="StaticBody2D"]
+[node name="MackerellWizard" type="StaticBody2D" groups=["mackerell"]]
 script = ExtResource("1_nre6u")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
@@ -53,3 +54,11 @@ shape = SubResource("RectangleShape2D_nre6u")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="beat_timer" type="Timer" parent="."]
+
+[node name="MackerellArea" type="Area2D" parent="." groups=["mackerell"]]
+unique_name_in_owner = true
+script = ExtResource("8_ke8kv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MackerellArea"]
+position = Vector2(6, 56)
+shape = SubResource("RectangleShape2D_nre6u")

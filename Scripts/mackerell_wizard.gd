@@ -20,6 +20,8 @@ func _ready() -> void:
 	
 	$beat_timer.wait_time = beat_interval
 	$beat_timer.start()
+
+	%MackerellArea.mackerell = self
 	
 
 func on_beat():
@@ -35,4 +37,8 @@ func fire_projectile(lane: LANES):
 	var proj = projectile_scene.instantiate()
 	proj.position = lane_positions[lane]
 	get_parent().add_child(proj)
+	
+func take_damage(damage: int) -> void:
+	# Handle damage logic here
+	print("Mackerell took damage: ", damage)
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dbbfcqml4u6ot"]
+[gd_scene load_steps=23 format=3 uid="uid://dbbfcqml4u6ot"]
 
 [ext_resource type="Script" uid="uid://bnf3w55vhwemh" path="res://Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://cinrafn7y3aaf" path="res://Art/Player/player_attack_0001.png" id="2_pylmc"]
@@ -113,6 +113,9 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pylmc"]
+size = Vector2(129.5, 133)
+
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_4flbx")
 jump_force = -500
@@ -122,8 +125,31 @@ double_jump_force = -500
 position = Vector2(2.5, 48)
 shape = SubResource("RectangleShape2D_4flbx")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2wuci")
 animation = &"attack"
+frame = 1
+frame_progress = 1.0
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="AreaRight" type="Area2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaRight"]
+position = Vector2(104.25, 51.5)
+shape = SubResource("RectangleShape2D_pylmc")
+
+[node name="AreaLeft" type="Area2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(2, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLeft"]
+position = Vector2(-105, 51.5)
+shape = SubResource("RectangleShape2D_pylmc")
+
+[connection signal="area_entered" from="AreaRight" to="." method="_on_area_2d_area_entered_right"]
+[connection signal="area_exited" from="AreaRight" to="." method="_on_area_2d_area_exited_right"]
+[connection signal="area_entered" from="AreaLeft" to="." method="_on_area_2d_area_entered_left"]
+[connection signal="area_exited" from="AreaLeft" to="." method="_on_area_2d_area_exited_left"]

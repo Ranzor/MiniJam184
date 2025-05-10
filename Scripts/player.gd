@@ -4,6 +4,14 @@ extends CharacterBody2D
 @export var jump_force = -400
 @export var double_jump_force = -350
 @export var gravity = 1200
+@export var beat_ms_offset = 0.02
+
+@export var base_damage = 1
+@export var attack_on_beat_multiplier_value = 1.0
+@export var attack_on_beat_multiplier_base = 1.0
+@export var attack_on_beat_ramping_pace = 5
+@export var attack_on_beat_ramping_increase = 0.5
+
 var can_double_jump = false
 
 var beat_timer = 0.0
@@ -12,6 +20,29 @@ var beat_timer = 0.0
 
 var is_attacking = false
 
+var target_right : StaticBody2D
+var target_left : StaticBody2D
+var attacking_right : bool = true
+var attack_on_beat_multiplier : float = 1
+var attack_on_beat_ramping_value : float = 0.0
+var attacks_on_beat : int = 0
+
+var on_beat = false
+var beat : int = 1
+
+func _ready() -> void:
+	Beatbox.connect("beat", on_beat_toggle)
+
+func on_beat_toggle():
+	on_beat = true
+	print("on_beat")
+	beat += 1
+	if beat > 4:
+		beat = 1
+	print("beat: ", beat)
+	await get_tree().create_timer(beat_ms_offset).timeout
+	print("off_beat")
+	on_beat = false
 
 func _physics_process(delta: float) -> void:
 	velocity.x = Input.get_axis("move_left", "move_right") * speed
@@ -27,8 +58,10 @@ func _physics_process(delta: float) -> void:
 		
 	if velocity.x > 0 and not is_attacking:
 		$Sprite2D.flip_h = false
+		attacking_right = true
 	elif velocity.x < 0 and not is_attacking:
 		$Sprite2D.flip_h = true
+		attacking_right = false
 
 	if Input.is_action_just_pressed("jump") and not is_attacking:
 		if is_on_floor():
@@ -51,11 +84,53 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("attack"):
 		$Sprite2D.play("attack")
 		is_attacking = true
+		deal_damage()
 		await $Sprite2D.animation_finished
 		is_attacking = false
 		
 	move_and_slide()
+
+func deal_damage():
+	if target_right:
+		deal_damage_to_target(target_right)
+	if target_left:
+		deal_damage_to_target(target_left)
+
+func deal_damage_to_target(target : StaticBody2D):
+	if on_beat:
+		attack_on_beat_multiplier = increase_attack_bonus()
+	else:
+		attack_on_beat_multiplier = 1
+		attack_on_beat_ramping_value = 0
+		attacks_on_beat = 0
+
+	target.take_damage(base_damage + attack_on_beat_multiplier)
 	
+func increase_attack_bonus() -> float:
+	attacks_on_beat += 1
+
+	if attacks_on_beat % attack_on_beat_ramping_pace == 0:
+		attack_on_beat_ramping_value += attack_on_beat_ramping_increase
+	
+	return attack_on_beat_multiplier_base + attack_on_beat_ramping_value
+
+
 func beat_action(action_type):
 	# TODO: Make fancy perfect timing effects
 	return
+
+func _on_area_2d_area_entered_left(area : Area2D) -> void:
+	if area.is_in_group("mackerell"):
+		target_left = area.get_mackerell()
+
+func _on_area_2d_area_exited_left(area : Area2D) -> void:
+	if area.is_in_group("mackerell"):
+		target_left = null
+
+func _on_area_2d_area_entered_right(area : Area2D) -> void:
+	if area.is_in_group("mackerell"):
+		target_right = area.get_mackerell()
+		
+func _on_area_2d_area_exited_right(area : Area2D) -> void:
+	if area.is_in_group("mackerell"):
+		target_right = null
