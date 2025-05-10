@@ -4,7 +4,8 @@ extends CharacterBody2D
 @export var jump_force = -400
 @export var double_jump_force = -350
 @export var gravity = 1200
-@export var beat_ms_offset = 0.02
+## We divide the beat inverval by this to get the delay for the beat hit. So hight number = lower delay
+@export var beat_hit_delay = 2
 
 @export var base_damage = 1
 @export var attack_on_beat_multiplier_value = 1.0
@@ -16,7 +17,7 @@ var can_double_jump = false
 
 var beat_timer = 0.0
 @onready var bpm = Beatbox.BPM
-@onready var beat_interval = bpm / 60
+@onready var beat_interval : float = bpm / 60
 
 var is_attacking = false
 
@@ -35,13 +36,10 @@ func _ready() -> void:
 
 func on_beat_toggle():
 	on_beat = true
-	print("on_beat")
 	beat += 1
 	if beat > 4:
 		beat = 1
-	print("beat: ", beat)
-	await get_tree().create_timer(beat_ms_offset).timeout
-	print("off_beat")
+	await get_tree().create_timer(beat_interval/2.0).timeout
 	on_beat = false
 
 func _physics_process(delta: float) -> void:
@@ -98,21 +96,27 @@ func deal_damage():
 
 func deal_damage_to_target(target : StaticBody2D):
 	if on_beat:
-		attack_on_beat_multiplier = increase_attack_bonus()
+		attack_on_beat_multiplier *= increase_attack_bonus()
 	else:
-		attack_on_beat_multiplier = 1
+		attack_on_beat_multiplier = 0
 		attack_on_beat_ramping_value = 0
 		attacks_on_beat = 0
+		Global.combo = attacks_on_beat
 
 	target.take_damage(base_damage + attack_on_beat_multiplier)
 	
 func increase_attack_bonus() -> float:
 	attacks_on_beat += 1
+	Global.combo = attacks_on_beat
 
 	if attacks_on_beat % attack_on_beat_ramping_pace == 0:
 		attack_on_beat_ramping_value += attack_on_beat_ramping_increase
+
+	print(str(attacks_on_beat) + ' - ' + str(attack_on_beat_ramping_value) + ' - ' + str(attack_on_beat_multiplier_value))
+
+	attack_on_beat_multiplier = attack_on_beat_multiplier_base + (attack_on_beat_multiplier_value * (attacks_on_beat+attack_on_beat_ramping_value))
 	
-	return attack_on_beat_multiplier_base + attack_on_beat_ramping_value
+	return attack_on_beat_ramping_value + attack_on_beat_multiplier_value
 
 
 func beat_action(action_type):
