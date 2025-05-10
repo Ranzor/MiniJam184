@@ -196,17 +196,9 @@ player = NodePath("../Player")
 follow_viewport_enabled = true
 
 [node name="HPBar" parent="CanvasLayer" instance=ExtResource("5_rka8t")]
-<<<<<<< HEAD
 offset_left = -765.0
-=======
-unique_name_in_owner = true
-offset_left = -17.0
->>>>>>> b278fb14efc7f576d8e1dbf94462163bead34d5a
 offset_top = 1563.0
 offset_right = -765.0
 offset_bottom = 1563.0
-<<<<<<< HEAD
 scale = Vector2(2.395, 2.395)
-=======
 script = ExtResource("7_bjebc")
->>>>>>> b278fb14efc7f576d8e1dbf94462163bead34d5a
