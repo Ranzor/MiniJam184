@@ -206,10 +206,10 @@ scale = Vector2(2.395, 2.395)
 script = ExtResource("7_bjebc")
 
 [node name="combo_text" parent="CanvasLayer" instance=ExtResource("8_5rr72")]
-visible = false
-offset_left = -1013.0
-offset_top = 1334.0
-offset_right = -1013.0
-offset_bottom = 1334.0
-scale = Vector2(3, 3)
+offset_left = -1009.0
+offset_top = 1557.0
+offset_right = -1009.0
+offset_bottom = 1557.0
+scale = Vector2(2, 2)
+pivot_offset = Vector2(0, 60)
 script = ExtResource("9_gyffv")
