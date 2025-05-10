@@ -189,7 +189,10 @@ z_index = 5
 position = Vector2(608, 926)
 player = NodePath("../Player")
 
-[node name="HPBar" parent="." instance=ExtResource("5_rka8t")]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="HPBar" parent="CanvasLayer" instance=ExtResource("5_rka8t")]
 offset_left = -17.0
 offset_top = 1563.0
 offset_right = -17.0
