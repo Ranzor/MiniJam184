@@ -1,6 +1,7 @@
 extends StaticBody2D
 
 enum LANES {TOP, HIGH, MID, LOW}
+@export var hp_max : int = 100
 @export var projectile_scene: PackedScene
 @export var sphere_mid : PackedScene
 @export var sphere_lrg : PackedScene
@@ -21,6 +22,10 @@ enum LANES {TOP, HIGH, MID, LOW}
 @onready var beat_interval = bpm / 60
 var current_pattern = []
 
+var hp : int = hp_max:
+	set(value):
+		hp = value
+		Global.HP_BAR.update_hp_bar(hp)
 
 func _ready() -> void:
 	Beatbox.connect("beat",on_beat)
@@ -29,7 +34,8 @@ func _ready() -> void:
 	$beat_timer.start()
 
 	%MackerellArea.mackerell = self
-	
+
+	Global.MAX_HP = hp_max
 
 func on_beat():
 	var atk
@@ -77,8 +83,9 @@ func spawn_in_view(scene: PackedScene, padding: float = 50.0) -> Sprite2D:
 func take_damage(damage: int) -> void:
 	# Handle damage logic here
 	print("Mackerell took damage: ", damage)
+	hp -= damage
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if player.position.x > position.x:
 		$Sprite2D.flip_h = true
 	else:
