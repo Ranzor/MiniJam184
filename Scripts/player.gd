@@ -16,7 +16,7 @@ var can_double_jump = false
 
 var beat_timer = 0.0
 @onready var bpm = Beatbox.BPM
-@onready var beat_interval = bpm / 60
+@onready var beat_interval : float = bpm / 60
 
 var is_attacking = false
 
@@ -40,7 +40,7 @@ func on_beat_toggle():
 	if beat > 4:
 		beat = 1
 	print("beat: ", beat)
-	await get_tree().create_timer(beat_ms_offset).timeout
+	await get_tree().create_timer(beat_interval/2.0).timeout
 	print("off_beat")
 	on_beat = false
 
