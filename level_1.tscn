@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-[gd_scene load_steps=32 format=3 uid="uid://dsoxs44he2su5"]
-=======
 [gd_scene load_steps=25 format=3 uid="uid://dsoxs44he2su5"]
->>>>>>> 276dc8d05e40dc152878edc014e01468593de897
 
 [ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="1_3hls8"]
 [ext_resource type="Texture2D" uid="uid://bik83ruk8geor" path="res://Art/Environment/environment_foreground_platforms.png" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="3_hn12h"]
 [ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="4_ihfcg"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="5_rka8t"]
-[ext_resource type="Texture2D" uid="uid://cfmgr4vlkqaf1" path="res://Art/Environment/plank.png" id="6_bjebc"]
-[ext_resource type="Texture2D" uid="uid://dcdygagk0k85a" path="res://Art/Environment/lamp.png" id="7_5rr72"]
-[ext_resource type="Texture2D" uid="uid://cfhsf4ijbrq6o" path="res://Art/Environment/light_alpha.png" id="8_gyffv"]
-=======
->>>>>>> 276dc8d05e40dc152878edc014e01468593de897
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(182, 1205)
@@ -27,6 +16,9 @@ size = Vector2(551, 1253.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ubhxj"]
 size = Vector2(213, 217)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65or1"]
+size = Vector2(115, 211)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lhbbi"]
 size = Vector2(101, 162)
@@ -42,9 +34,6 @@ size = Vector2(105.5, 203)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kb5eu"]
 size = Vector2(135, 239.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_65or1"]
-size = Vector2(149.195, 154.006)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hbghi"]
 size = Vector2(183, 30)
@@ -75,68 +64,6 @@ size = Vector2(190.5, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pe0h"]
 size = Vector2(179, 14.5)
-
-[sub_resource type="Animation" id="Animation_1pe0h"]
-resource_name = "background_looping"
-length = 3.3
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.8, 1.06667, 1.96667, 2.33333, 3.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 0.164061, 0.164061, -0.139626, -0.139626, 0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2D2:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.26667, 2.33333, 3.33333),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [0.0, -0.0872665, 0.0872665, 0.0]
-}
-
-[sub_resource type="Animation" id="Animation_27bay"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Node2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Node2D2:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_sof0w"]
-_data = {
-&"RESET": SubResource("Animation_27bay"),
-&"background_looping": SubResource("Animation_1pe0h")
-}
 
 [node name="Node2D" type="Node2D"]
 
@@ -169,6 +96,11 @@ shape = SubResource("RectangleShape2D_ggavl")
 position = Vector2(-366.5, 1027)
 shape = SubResource("RectangleShape2D_ubhxj")
 
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="EnvironmentForegroundPlatforms/Full Collision"]
+position = Vector2(-280, 1056)
+rotation = -0.359538
+shape = SubResource("RectangleShape2D_65or1")
+
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="EnvironmentForegroundPlatforms/Full Collision"]
 position = Vector2(-130.5, 1118)
 shape = SubResource("RectangleShape2D_lhbbi")
@@ -188,10 +120,6 @@ shape = SubResource("RectangleShape2D_3qmij")
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="EnvironmentForegroundPlatforms/Full Collision"]
 position = Vector2(1151.5, 1051.25)
 shape = SubResource("RectangleShape2D_kb5eu")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="EnvironmentForegroundPlatforms/Full Collision"]
-position = Vector2(-258.366, 1071.18)
-shape = SubResource("RectangleShape2D_65or1")
 
 [node name="One Way Collision" type="StaticBody2D" parent="EnvironmentForegroundPlatforms"]
 
@@ -248,10 +176,8 @@ one_way_collision = true
 [node name="Player" parent="." instance=ExtResource("3_hn12h")]
 z_index = 10
 position = Vector2(-296, 888)
-speed = 450
-jump_force = -1100
+jump_force = -1000
 double_jump_force = -800
-gravity = 2000
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 734)
@@ -260,35 +186,3 @@ zoom = Vector2(0.35, 0.35)
 [node name="MackerellWizard" parent="." instance=ExtResource("4_ihfcg")]
 z_index = 5
 position = Vector2(608, 926)
-<<<<<<< HEAD
-sphere_lrg = ExtResource("5_rka8t")
-
-[node name="Node2D2" type="Node2D" parent="."]
-position = Vector2(-490, 1098)
-scale = Vector2(1.64, 1.64)
-
-[node name="Plank" type="Sprite2D" parent="Node2D2"]
-position = Vector2(-4.87805, 20.122)
-texture = ExtResource("6_bjebc")
-
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(712, 591)
-scale = Vector2(1.64, 1.64)
-
-[node name="Lamp" type="Sprite2D" parent="Node2D"]
-position = Vector2(-1.82927, 56.0976)
-texture = ExtResource("7_5rr72")
-
-[node name="PointLight2D" type="PointLight2D" parent="Node2D"]
-position = Vector2(0, 73.7805)
-color = Color(1, 0.52549, 0, 0.776471)
-energy = 0.3
-texture = ExtResource("8_gyffv")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_sof0w")
-}
-autoplay = "background_looping"
-=======
->>>>>>> 276dc8d05e40dc152878edc014e01468593de897
