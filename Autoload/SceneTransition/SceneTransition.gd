@@ -16,7 +16,7 @@ func _ready() -> void:
 	_color_rect.anchor_bottom = 1.0
 	_color_rect.color = fade_color
 	_color_rect.color.a = 0.0
-	_color_rect.add_child(_color_rect)
+	add_child(_color_rect)
 	
 	
 func transition_to_scene(path : String) -> void:
