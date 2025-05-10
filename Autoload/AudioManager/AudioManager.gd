@@ -43,5 +43,18 @@ func load_settings() -> void:
 			var vol = config.get_value("Audio", bus, 0.0)
 			AudioServer.set_bus_volume_db(AudioServer.get_bus_index(bus),vol)
 			
+func play_music(music: AudioStream, volume_db: float = 0.0) -> void:
+	stop_music()
+	_current_music = AudioStreamPlayer.new()
+	add_child(_current_music)
+	_current_music.stream = music
+	_current_music.volume_db = volume_db
+	_current_music.play()
+	_current_music.finished.connect(_on_music_finished)
+	music_track_changed.emit(music.resource_path.get_file())
+
+func get_current_music_player() -> AudioStreamPlayer:
+	return _current_music
+			
 func _on_music_finished() -> void:
 	_current_music.play()
