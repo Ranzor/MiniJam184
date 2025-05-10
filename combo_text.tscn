@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://c6ex0s5lubu7c"]
+
+[ext_resource type="Shader" uid="uid://i70tus11eh8j" path="res://Shaders/text_gradient.gdshader" id="1_j788w"]
+[ext_resource type="FontFile" uid="uid://cahid8cqr8q77" path="res://Art/Fonts/Inter-BlackItalic.otf" id="2_0hmwo"]
+
+[sub_resource type="Gradient" id="Gradient_j788w"]
+offsets = PackedFloat32Array(0, 0.991803, 1)
+colors = PackedColorArray(0.883652, 0.00735096, 0.408429, 1, 0.976856, 0.884282, 0.353263, 1, 1, 1, 0.215686, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_0hmwo"]
+gradient = SubResource("Gradient_j788w")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2tr6c"]
+shader = ExtResource("1_j788w")
+shader_parameter/gradient = SubResource("GradientTexture1D_0hmwo")
+shader_parameter/gradient_mix_amount = -2.5
+
+[node name="combo_text" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Outline" type="Label" parent="."]
+offset_right = 173.0
+offset_bottom = 61.0
+theme_override_colors/font_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_0hmwo")
+theme_override_font_sizes/font_size = 50
+text = "x8999"
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+material = SubResource("ShaderMaterial_2tr6c")
+offset_right = 177.0
+offset_bottom = 57.0
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
+size = Vector2i(177, 57)
+
+[node name="text" type="Label" parent="SubViewportContainer/SubViewport"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_0hmwo")
+theme_override_font_sizes/font_size = 50
+text = "x8999"
