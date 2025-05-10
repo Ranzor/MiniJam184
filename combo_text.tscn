@@ -24,8 +24,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="Outline" type="Label" parent="."]
 =======
+=======
+>>>>>>> Stashed changes
 [node name="combo_text_medium" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -171,8 +174,11 @@ size = Vector2i(177, 57)
 render_target_update_mode = 0
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="text" type="Label" parent="SubViewportContainer/SubViewport"]
 =======
+=======
+>>>>>>> Stashed changes
 [node name="TheText" type="Label" parent="combo_text_small/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 >>>>>>> Stashed changes
