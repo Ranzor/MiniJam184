@@ -34,7 +34,7 @@ shape = SubResource("RectangleShape2D_yiyty")
 
 [node name="MackerellWizard" parent="." instance=ExtResource("2_jt5j1")]
 z_index = 1
-position = Vector2(1063, 371)
+position = Vector2(590, 371)
 projectile_scene = ExtResource("3_yiyty")
 lane_positions = {
 0: Vector2(938, 145),
@@ -45,3 +45,4 @@ lane_positions = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 323)
+zoom = Vector2(0.25, 0.25)
