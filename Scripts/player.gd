@@ -13,6 +13,7 @@ var beat_timer = 0.0
 
 var is_attacking = false
 var bounce = false
+var tempdir = 0
 
 
 func _physics_process(delta: float) -> void:
@@ -57,14 +58,20 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("duck") and is_on_floor() and not is_attacking:
 		$CollisionShape2D.scale.y = 0.5
 		beat_action("duck")
+		tempdir = dir
+		dir = 0
 	elif Input.is_action_just_released("duck") and not is_attacking:
 		$CollisionShape2D.scale.y = 1.0
+		dir = tempdir
 		
 	if Input.is_action_just_pressed("attack"):
 		$Sprite2D.play("attack")
 		is_attacking = true
+		tempdir = dir
+		dir = 0
 		await $Sprite2D.animation_finished
 		is_attacking = false
+		dir = tempdir
 		
 	move_and_slide()
 	
