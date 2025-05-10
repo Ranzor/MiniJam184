@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=3 uid="uid://diifm6lqtsxqs"]
+[gd_scene load_steps=15 format=3 uid="uid://diifm6lqtsxqs"]
 
 [ext_resource type="Script" uid="uid://c0hftlrsgxvth" path="res://Scripts/mackerell_wizard.gd" id="1_nre6u"]
 [ext_resource type="PackedScene" uid="uid://7gtbrduojjps" path="res://projectile.tscn" id="2_ke8kv"]
 [ext_resource type="Texture2D" uid="uid://clgdq1n5ytb5t" path="res://Art/mackerell wizard/mw_idle_0000.png" id="2_nre6u"]
 [ext_resource type="PackedScene" uid="uid://b8e88qi6pis8s" path="res://telegraphed_sphere_mid.tscn" id="3_c3816"]
 [ext_resource type="Texture2D" uid="uid://ddxk4agw7yc45" path="res://Art/mackerell wizard/mw_idle_0001.png" id="3_itipt"]
+[ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="4_c2gti"]
 [ext_resource type="Texture2D" uid="uid://cao2suhthexcf" path="res://Art/mackerell wizard/mw_idle_0002.png" id="4_l3y15"]
+[ext_resource type="PackedScene" uid="uid://byuctw61tnfxq" path="res://telegraph_attack_vert_large.tscn" id="5_6iq4i"]
 [ext_resource type="Texture2D" uid="uid://c8gje3d7y5hja" path="res://Art/mackerell wizard/mw_idle_0003.png" id="5_x86ss"]
 [ext_resource type="Texture2D" uid="uid://du16smpbmfjat" path="res://Art/mackerell wizard/mw_idle_0004.png" id="6_ktmyw"]
 [ext_resource type="Texture2D" uid="uid://vdh5e26cfu1i" path="res://Art/mackerell wizard/mw_idle_0005.png" id="7_v5hhe"]
@@ -44,6 +46,8 @@ size = Vector2(122, 386)
 script = ExtResource("1_nre6u")
 projectile_scene = ExtResource("2_ke8kv")
 sphere_mid = ExtResource("3_c3816")
+sphere_lrg = ExtResource("4_c2gti")
+beam_lrg = ExtResource("5_6iq4i")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4viln")
