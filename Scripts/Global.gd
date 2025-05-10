@@ -1,3 +1,3 @@
 extends Node
 
-var BPM = 100
+var combo = 0

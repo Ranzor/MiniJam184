@@ -53,7 +53,7 @@ func toggle_visibility(object):
 	animation.play(animation_type + str(object.name))
 
 func _on_new_game_button_pressed():
-	SceneTransition.transition_to_scene("res://testlvl.tscn")
+	SceneTransition.transition_to_scene("res://level_1.tscn")
 	Beatbox.reset()
 
 

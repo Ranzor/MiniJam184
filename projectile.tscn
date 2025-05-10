@@ -17,3 +17,5 @@ shape = SubResource("CircleShape2D_a85iw")
 texture = ExtResource("1_a85iw")
 region_enabled = true
 region_rect = Rect2(58.5027, 781.5, 140.497, 135.564)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

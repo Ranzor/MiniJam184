@@ -116,7 +116,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pylmc"]
 size = Vector2(129.5, 133)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_4flbx")
 jump_force = -500
 double_jump_force = -500
