@@ -4,6 +4,7 @@ enum LANES {TOP, HIGH, MID, LOW}
 @export var projectile_scene: PackedScene
 @export var sphere_mid : PackedScene
 @export var sphere_lrg : PackedScene
+@export var beam_lrg : PackedScene
 
 @export var lane_positions: Dictionary = {
 	LANES.TOP: Vector2(0,0),
@@ -27,12 +28,14 @@ func _ready() -> void:
 	
 
 func on_beat():
-	var x = randi_range(1,2)
+	var x = randi_range(1,3)
 	var atk
 	if x == 1:
 		atk = spawn_in_view(sphere_mid)
 	elif x == 2:
 		atk = spawn_in_view(sphere_lrg)
+	elif x ==  3:
+		atk = spawn_in_view(beam_lrg)
 		
 	atk.set_beat = Beatbox.total_beats
 	if current_pattern.is_empty() and Beatbox.beat_count == 2:

@@ -1,13 +1,20 @@
+<<<<<<< HEAD
 [gd_scene load_steps=32 format=3 uid="uid://dsoxs44he2su5"]
+=======
+[gd_scene load_steps=25 format=3 uid="uid://dsoxs44he2su5"]
+>>>>>>> 276dc8d05e40dc152878edc014e01468593de897
 
 [ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="1_3hls8"]
 [ext_resource type="Texture2D" uid="uid://bik83ruk8geor" path="res://Art/Environment/environment_foreground_platforms.png" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="3_hn12h"]
 [ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="4_ihfcg"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="5_rka8t"]
 [ext_resource type="Texture2D" uid="uid://cfmgr4vlkqaf1" path="res://Art/Environment/plank.png" id="6_bjebc"]
 [ext_resource type="Texture2D" uid="uid://dcdygagk0k85a" path="res://Art/Environment/lamp.png" id="7_5rr72"]
 [ext_resource type="Texture2D" uid="uid://cfhsf4ijbrq6o" path="res://Art/Environment/light_alpha.png" id="8_gyffv"]
+=======
+>>>>>>> 276dc8d05e40dc152878edc014e01468593de897
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(182, 1205)
@@ -253,6 +260,7 @@ zoom = Vector2(0.35, 0.35)
 [node name="MackerellWizard" parent="." instance=ExtResource("4_ihfcg")]
 z_index = 5
 position = Vector2(608, 926)
+<<<<<<< HEAD
 sphere_lrg = ExtResource("5_rka8t")
 
 [node name="Node2D2" type="Node2D" parent="."]
@@ -282,3 +290,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_sof0w")
 }
 autoplay = "background_looping"
+=======
+>>>>>>> 276dc8d05e40dc152878edc014e01468593de897
