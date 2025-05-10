@@ -7,6 +7,9 @@ enum LANES {TOP, HIGH, MID, LOW}
 @export var beam_lrg : PackedScene
 @export var player : CharacterBody2D
 
+@export var beam_pattern_a : PackedScene
+@export var beam_pattern_b : PackedScene
+
 @export var lane_positions: Dictionary = {
 	LANES.TOP: Vector2(0,0),
 	LANES.HIGH: Vector2(0,0),
@@ -29,16 +32,19 @@ func _ready() -> void:
 	
 
 func on_beat():
-	var x = randi_range(1,3)
 	var atk
-	if x == 1:
-		atk = spawn_in_view(sphere_mid)
-	elif x == 2:
-		atk = spawn_in_view(sphere_lrg)
-	elif x ==  3:
-		atk = spawn_in_view(beam_lrg)
+	if Beatbox.total_beats == 5:
+		atk = beam_pattern_a.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
 		
-	atk.set_beat = Beatbox.total_beats
+	if Beatbox.total_beats == 10:
+		atk = beam_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+
 	if current_pattern.is_empty() and Beatbox.beat_count == 2:
 		fire_projectile(LANES.values().pick_random())
 	else:
