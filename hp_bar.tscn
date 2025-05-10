@@ -5,11 +5,11 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ceqaf"]
 atlas = ExtResource("1_ybxu1")
-region = Rect2(1167.79, 215.579, 506.612, 43.8017)
+region = Rect2(640, 32, 1248, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_57dvl"]
 atlas = ExtResource("1_ybxu1")
-region = Rect2(1167.8, 259, 500.5, 40.7)
+region = Rect2(642, 73, 1243, 28.4977)
 
 [node name="HPBar" type="Control"]
 layout_mode = 3
@@ -24,7 +24,7 @@ unique_name_in_owner = true
 layout_mode = 0
 offset_right = 506.0
 offset_bottom = 43.0
-scale = Vector2(2.275, 2.275)
+scale = Vector2(0.9, 0.9)
 value = 100.0
 texture_under = SubResource("AtlasTexture_ceqaf")
 texture_progress = SubResource("AtlasTexture_57dvl")
