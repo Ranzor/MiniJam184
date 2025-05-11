@@ -2,6 +2,8 @@ extends Node
 
 var combo : int = 0:
 	set(value):
+		if value <= 0:
+			value = 0
 		combo = value
 		COMBO_TEXT.update_combo_text(combo)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ba3bym5gx600n"]
+[gd_scene load_steps=2 format=3 uid="uid://ba3bym5gx600n"]
 
 [ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="1_s558p"]
 

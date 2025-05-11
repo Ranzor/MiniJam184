@@ -4,6 +4,7 @@ var set_beat = 2
 var target_beat = 0
 @export var tele : Texture2D
 @export var atk : Texture2D
+@export var damage : int = 3
 
 var can_hit = false
 
@@ -19,7 +20,8 @@ func _process(delta: float) -> void:
 	
 	if Beatbox.total_beats == target_beat:
 		if can_hit:
-			Global.combo = 0
+			print("hit")
+			Global.combo -= damage
 			can_hit = false
 			pass
 		for i in get_children():
