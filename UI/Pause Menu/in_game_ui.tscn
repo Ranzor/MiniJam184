@@ -1,0 +1,1773 @@
+[gd_scene load_steps=23 format=3 uid="uid://c2bscbctunfpl"]
+
+[ext_resource type="Script" uid="uid://dj1mqnokdwqp6" path="res://UI/Pause Menu/popup_menu.gd" id="1_e6quo"]
+[ext_resource type="Texture2D" uid="uid://mmginp5xf7r5" path="res://Art/UX_Sprite.png" id="1_kenku"]
+[ext_resource type="FontFile" uid="uid://d4a6stgcu2hxo" path="res://Art/Fonts/Inter-Black.otf" id="2_onc8m"]
+[ext_resource type="FontFile" uid="uid://dl7xaw81vyixy" path="res://Art/Fonts/Inter-Medium.otf" id="4_cwbuu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0qsvx"]
+texture = ExtResource("1_kenku")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(381, 679, 84, 84)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uusyb"]
+texture = ExtResource("1_kenku")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(383, 569, 80, 80)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kenku"]
+texture = ExtResource("1_kenku")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(378, 676, 90, 90)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e6quo"]
+texture = ExtResource("1_kenku")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(382, 569, 82, 80)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_onc8m"]
+texture = ExtResource("1_kenku")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(841, 676, 90, 90)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cwbuu"]
+texture = ExtResource("1_kenku")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+region_rect = Rect2(846, 569, 80, 80)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ep3pr"]
+texture = ExtResource("1_kenku")
+region_rect = Rect2(461, 1030, 41, 54)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4v80v"]
+texture = ExtResource("1_kenku")
+region_rect = Rect2(461, 923, 41, 55)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpq86"]
+texture = ExtResource("1_kenku")
+region_rect = Rect2(1227, 1012, 65, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8h7b"]
+texture = ExtResource("1_kenku")
+region_rect = Rect2(1227, 911, 65, 73)
+
+[sub_resource type="Animation" id="Animation_4v80v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popupMenu/pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(450, 500)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("popupMenu/miniMenu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("popupMenu/miniMenu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("popupMenu/helpMenu:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("popupMenu/helpMenu:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("popupMenu/helpMenu/background:custom_minimum_size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(700, 500)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("popupMenu/helpMenu/background/bodyArea/NinePatchRect:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(650, 340)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("popupMenu/helpMenu/title:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("popupMenu/helpMenu/title:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("popupMenu/helpMenu/body:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("popupMenu/helpMenu/body:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("popupMenu/optionsMenu:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("popupMenu/optionsMenu:modulate")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("popupMenu/optionsMenu/background:custom_minimum_size")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(700, 500)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("popupMenu/optionsMenu/background/bodyArea/NinePatchRect:custom_minimum_size")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 340)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("popupMenu/optionsMenu/title:visible")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("popupMenu/optionsMenu/title:modulate")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("popupMenu/optionsMenu/background:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("popupMenu/optionsMenu/body:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("popupMenu/optionsMenu/body:modulate")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("popupMenu/optionsMenu/exitButton:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("popupMenu/optionsMenu/exitButton:modulate")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ep3pr"]
+resource_name = "close_helpMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popupMenu/pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 500), Vector2(450, 500)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("popupMenu/helpMenu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("popupMenu/helpMenu:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("popupMenu/helpMenu/background:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(700, 500), Vector2(0, 500)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("popupMenu/helpMenu/background/bodyArea/NinePatchRect:custom_minimum_size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(650, 340), Vector2(0, 340)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("popupMenu/helpMenu/title:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(-0.0666667, 0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("popupMenu/helpMenu/title:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("popupMenu/helpMenu/body:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("popupMenu/helpMenu/body:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_l8h7b"]
+resource_name = "close_optionsMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popupMenu/pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 500), Vector2(450, 500)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("popupMenu/helpMenu/title:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(-0.0666667, 0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("popupMenu/helpMenu/title:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.03, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("popupMenu/optionsMenu:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("popupMenu/optionsMenu:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("popupMenu/optionsMenu/background:custom_minimum_size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(700, 500), Vector2(0, 500)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("popupMenu/optionsMenu/background/bodyArea/NinePatchRect:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(650, 340), Vector2(0, 340)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("popupMenu/optionsMenu/title:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("popupMenu/optionsMenu/title:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("popupMenu/optionsMenu/background:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("popupMenu/optionsMenu/body:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("popupMenu/optionsMenu/body:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("popupMenu/optionsMenu/exitButton:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.0333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("popupMenu/optionsMenu/exitButton:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.37, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0qsvx"]
+resource_name = "close_pauseMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popupMenu/pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.451129),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(450, 500), Vector2(475, 525), Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.166667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.0666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.337255)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("popupMenu/miniMenu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("popupMenu/miniMenu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [false, true, false]
+}
+
+[sub_resource type="Animation" id="Animation_uusyb"]
+resource_name = "open_helpMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popupMenu/pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(450, 500), Vector2(0, 500)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("popupMenu/helpMenu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("popupMenu/helpMenu:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("popupMenu/helpMenu/background:custom_minimum_size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 500), Vector2(700, 500)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("popupMenu/helpMenu/background/bodyArea/NinePatchRect:custom_minimum_size")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.30157, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 340), Vector2(650, 340)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("popupMenu/helpMenu/title:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(-0.0666667, 0, 0.369966),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("popupMenu/helpMenu/title:modulate")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.369966, 0.4, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("popupMenu/helpMenu/body:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.37),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("popupMenu/helpMenu/body:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.37, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dpq86"]
+resource_name = "open_optionsMenu"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popupMenu/pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:custom_minimum_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(450, 500), Vector2(0, 500)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("popupMenu/helpMenu/title:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(-0.0666667, 0, 0.369966),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("popupMenu/helpMenu/title:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.369966, 0.4, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("popupMenu/optionsMenu:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.199566),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("popupMenu/optionsMenu:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("popupMenu/optionsMenu/background:custom_minimum_size")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 500), Vector2(700, 500)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("popupMenu/optionsMenu/background/bodyArea/NinePatchRect:custom_minimum_size")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 340), Vector2(650, 340)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("popupMenu/optionsMenu/title:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.37),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("popupMenu/optionsMenu/title:modulate")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0.37, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("popupMenu/optionsMenu/background:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("popupMenu/optionsMenu/body:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.37),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("popupMenu/optionsMenu/body:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0.37, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("popupMenu/optionsMenu/exitButton:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.37),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("popupMenu/optionsMenu/exitButton:modulate")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0.37, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_cwbuu"]
+resource_name = "open_pauseMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("popupMenu/pauseMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground:custom_minimum_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(475, 525), Vector2(450, 500)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.337255), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("popupMenu/miniMenu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("popupMenu/miniMenu:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.15, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [true, false, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0qsvx"]
+_data = {
+&"RESET": SubResource("Animation_4v80v"),
+&"close_helpMenu": SubResource("Animation_ep3pr"),
+&"close_optionsMenu": SubResource("Animation_l8h7b"),
+&"close_pauseMenu": SubResource("Animation_0qsvx"),
+&"open_helpMenu": SubResource("Animation_uusyb"),
+&"open_optionsMenu": SubResource("Animation_dpq86"),
+&"open_pauseMenu": SubResource("Animation_cwbuu")
+}
+
+[node name="inGameMenu_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="popupMenu" type="MarginContainer" parent="." node_paths=PackedStringArray("menu_screen", "open_menu_screen", "help_menu_screen", "options_menu_screen", "open_menu_button", "close_menu_button", "open_help_button", "close_help_button", "open_options_button", "close_options_button", "open_mainMenu_button", "open_quitGame_button")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e6quo")
+menu_screen = NodePath("pauseMenu")
+open_menu_screen = NodePath("miniMenu")
+help_menu_screen = NodePath("helpMenu")
+options_menu_screen = NodePath("optionsMenu")
+open_menu_button = NodePath("miniMenu/HBoxContainer/MarginContainer/HBoxContainer/toggleMenuButton")
+close_menu_button = NodePath("pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer/toggleMenuButton")
+open_help_button = NodePath("pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer/toggleHelpMenu")
+close_help_button = NodePath("helpMenu/exitButton/MarginContainer/toggleHelpMenu")
+open_options_button = NodePath("pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer/toggleOptionsMenu")
+close_options_button = NodePath("optionsMenu/exitButton/MarginContainer/toggleOptionsMenu")
+open_mainMenu_button = NodePath("pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer/mainMenuButton")
+open_quitGame_button = NodePath("pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/bottomButtonContainer/quitButton")
+
+[node name="pauseMenu" type="VBoxContainer" parent="popupMenu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 50
+
+[node name="baseMenuScreen" type="MarginContainer" parent="popupMenu/pauseMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="popupMenu/pauseMenu/baseMenuScreen"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="menuBackground" type="NinePatchRect" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer"]
+custom_minimum_size = Vector2(450, 500)
+layout_mode = 2
+texture = ExtResource("1_kenku")
+region_rect = Rect2(20, 141, 200, 202)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 60
+
+[node name="MarginContainer" type="MarginContainer" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -29.0
+offset_right = 11.4296
+offset_bottom = -19.7008
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 70
+
+[node name="textDisplay" type="VBoxContainer" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/textDisplay"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.313726, 0.121569, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.764706)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 24
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_font_sizes/font_size = 44
+text = "Game Paused
+"
+
+[node name="closeButtonContainer" type="VBoxContainer" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/textDisplay"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="topButtonContainer" type="VBoxContainer" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 11
+
+[node name="toggleMenuButton" type="Button" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer"]
+custom_minimum_size = Vector2(220, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.172549, 0.262745, 0.203922, 1)
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_0qsvx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0qsvx")
+theme_override_styles/normal = SubResource("StyleBoxTexture_uusyb")
+text = "Resume"
+
+[node name="toggleOptionsMenu" type="Button" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer"]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.172549, 0.262745, 0.203922, 1)
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e6quo")
+text = "Options"
+
+[node name="toggleHelpMenu" type="Button" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer"]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.172549, 0.262745, 0.203922, 1)
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e6quo")
+text = "Help
+"
+
+[node name="mainMenuButton" type="Button" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer"]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.172549, 0.262745, 0.203922, 1)
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kenku")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e6quo")
+text = "Main Menu"
+
+[node name="bottomButtonContainer" type="VBoxContainer" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="quitButton" type="Button" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/bottomButtonContainer"]
+custom_minimum_size = Vector2(220, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/hover = SubResource("StyleBoxTexture_onc8m")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_onc8m")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cwbuu")
+text = "Quit"
+
+[node name="separator" type="Control" parent="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer"]
+layout_mode = 2
+
+[node name="separator2" type="Control" parent="popupMenu/pauseMenu"]
+layout_mode = 2
+
+[node name="miniMenu" type="VBoxContainer" parent="popupMenu"]
+custom_minimum_size = Vector2(30, 20)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popupMenu/miniMenu"]
+custom_minimum_size = Vector2(30, 15)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="separator2" type="Control" parent="popupMenu/miniMenu/HBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="popupMenu/miniMenu/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="HBoxContainer" type="HBoxContainer" parent="popupMenu/miniMenu/HBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="toggleMenuButton" type="Button" parent="popupMenu/miniMenu/HBoxContainer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(25, 25)
+layout_mode = 2
+theme_override_styles/hover = SubResource("StyleBoxTexture_ep3pr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ep3pr")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4v80v")
+
+[node name="helpMenu" type="MarginContainer" parent="popupMenu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -1
+theme_override_constants/margin_bottom = -9
+
+[node name="background" type="NinePatchRect" parent="popupMenu/helpMenu"]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_kenku")
+region_rect = Rect2(20, 141, 201, 200)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 60
+
+[node name="bodyArea" type="VBoxContainer" parent="popupMenu/helpMenu/background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -172.0
+offset_right = 325.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Control" type="Control" parent="popupMenu/helpMenu/background/bodyArea"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/helpMenu/background/bodyArea"]
+custom_minimum_size = Vector2(650, 340)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_kenku")
+region_rect = Rect2(22, 367, 151, 151)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 60
+
+[node name="title" type="HBoxContainer" parent="popupMenu/helpMenu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="popupMenu/helpMenu/title"]
+layout_mode = 2
+
+[node name="title" type="VBoxContainer" parent="popupMenu/helpMenu/title"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="popupMenu/helpMenu/title/title"]
+layout_mode = 2
+
+[node name="howtoDisplay" type="Label" parent="popupMenu/helpMenu/title/title"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.313726, 0.121569, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.764706)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 24
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_font_sizes/font_size = 44
+text = "How to play"
+
+[node name="body" type="MarginContainer" parent="popupMenu/helpMenu"]
+visible = false
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 46
+
+[node name="body" type="VBoxContainer" parent="popupMenu/helpMenu/body"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="howtoDisplay" type="Label" parent="popupMenu/helpMenu/body/body"]
+custom_minimum_size = Vector2(600, 275)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_cwbuu")
+theme_override_font_sizes/font_size = 19
+text = "This must contain but is not limited to: Keybindings, goals, general rules and the aim of the game.
+
+This should be the only place a player needs to view to understand how the game works.
+"
+autowrap_mode = 3
+
+[node name="exitButton" type="VBoxContainer" parent="popupMenu/helpMenu"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="popupMenu/helpMenu/exitButton"]
+layout_mode = 2
+theme_override_constants/margin_top = 27
+theme_override_constants/margin_right = 19
+
+[node name="toggleHelpMenu" type="Button" parent="popupMenu/helpMenu/exitButton/MarginContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_dpq86")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dpq86")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l8h7b")
+
+[node name="optionsMenu" type="MarginContainer" parent="popupMenu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -1
+theme_override_constants/margin_bottom = -9
+
+[node name="background" type="NinePatchRect" parent="popupMenu/optionsMenu"]
+visible = false
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_kenku")
+region_rect = Rect2(20, 141, 201, 200)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 60
+
+[node name="bodyArea" type="VBoxContainer" parent="popupMenu/optionsMenu/background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -172.0
+offset_right = 325.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Control" type="Control" parent="popupMenu/optionsMenu/background/bodyArea"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="popupMenu/optionsMenu/background/bodyArea"]
+custom_minimum_size = Vector2(0, 340)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_kenku")
+region_rect = Rect2(22, 367, 151, 151)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 60
+
+[node name="title" type="HBoxContainer" parent="popupMenu/optionsMenu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="popupMenu/optionsMenu/title"]
+layout_mode = 2
+
+[node name="title" type="VBoxContainer" parent="popupMenu/optionsMenu/title"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="popupMenu/optionsMenu/title/title"]
+layout_mode = 2
+
+[node name="optionsDisplay" type="Label" parent="popupMenu/optionsMenu/title/title"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.313726, 0.121569, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.764706)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 24
+theme_override_fonts/font = ExtResource("2_onc8m")
+theme_override_font_sizes/font_size = 44
+text = "Options"
+
+[node name="body" type="MarginContainer" parent="popupMenu/optionsMenu"]
+visible = false
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 46
+
+[node name="body" type="VBoxContainer" parent="popupMenu/optionsMenu/body"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="howtoDisplay" type="Label" parent="popupMenu/optionsMenu/body/body"]
+custom_minimum_size = Vector2(600, 275)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("4_cwbuu")
+theme_override_font_sizes/font_size = 19
+text = "Add relevant game options"
+autowrap_mode = 3
+
+[node name="exitButton" type="VBoxContainer" parent="popupMenu/optionsMenu"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="popupMenu/optionsMenu/exitButton"]
+layout_mode = 2
+theme_override_constants/margin_top = 27
+theme_override_constants/margin_right = 19
+
+[node name="toggleOptionsMenu" type="Button" parent="popupMenu/optionsMenu/exitButton/MarginContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_dpq86")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dpq86")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l8h7b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="popupMenu"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_0qsvx")
+}
+
+[connection signal="pressed" from="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer/toggleMenuButton" to="popupMenu" method="_on_toggle_menu_button_pressed"]
+[connection signal="pressed" from="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer/toggleOptionsMenu" to="popupMenu" method="_on_toggle_options_menu_pressed"]
+[connection signal="pressed" from="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer/toggleHelpMenu" to="popupMenu" method="_on_toggle_help_menu_pressed"]
+[connection signal="pressed" from="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/topButtonContainer/mainMenuButton" to="popupMenu" method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="popupMenu/pauseMenu/baseMenuScreen/VBoxContainer/menuBackground/MarginContainer/bottomButtonContainer/quitButton" to="popupMenu" method="_on_quit_button_pressed"]
+[connection signal="pressed" from="popupMenu/miniMenu/HBoxContainer/MarginContainer/HBoxContainer/toggleMenuButton" to="popupMenu" method="_on_toggle_menu_button_pressed"]
+[connection signal="pressed" from="popupMenu/helpMenu/exitButton/MarginContainer/toggleHelpMenu" to="popupMenu" method="_on_toggle_help_menu_pressed"]
+[connection signal="pressed" from="popupMenu/optionsMenu/exitButton/MarginContainer/toggleOptionsMenu" to="popupMenu" method="_on_toggle_options_menu_pressed"]

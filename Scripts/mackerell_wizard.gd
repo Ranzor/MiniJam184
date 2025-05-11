@@ -3,13 +3,18 @@ extends StaticBody2D
 enum LANES {TOP, HIGH, MID, LOW}
 @export var hp_max : int = 100
 @export var projectile_scene: PackedScene
-@export var sphere_mid : PackedScene
-@export var sphere_lrg : PackedScene
-@export var beam_lrg : PackedScene
 @export var player : CharacterBody2D
 
 @export var beam_pattern_a : PackedScene
 @export var beam_pattern_b : PackedScene
+@export var beam_pattern_c : PackedScene
+@export var beam_pattern_d : PackedScene
+@export var beam_pattern_e : PackedScene
+@export var sphere_pattern_a : PackedScene
+@export var sphere_pattern_b : PackedScene
+@export var sphere_pattern_c : PackedScene
+@export var hybrid_pattern_a : PackedScene
+@export var hybrid_pattern_b : PackedScene
 
 @export var lane_positions: Dictionary = {
 	LANES.TOP: Vector2(0,0),
@@ -47,6 +52,54 @@ func on_beat():
 		
 	if Beatbox.total_beats == 10:
 		atk = beam_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+	
+	if Beatbox.total_beats == 15:
+		atk = sphere_pattern_a.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+			
+	if Beatbox.total_beats == 20:
+		atk = sphere_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+			
+	if Beatbox.total_beats == 25:
+		atk = sphere_pattern_c.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+			
+	if Beatbox.total_beats == 30:
+		atk = hybrid_pattern_a.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+			
+	if Beatbox.total_beats == 35:
+		atk = hybrid_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+	
+	if Beatbox.total_beats == 40:
+		atk = beam_pattern_c.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+	
+	if Beatbox.total_beats == 45:
+		atk = beam_pattern_d.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+	
+	if Beatbox.total_beats == 50:
+		atk = beam_pattern_e.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats

@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba3bym5gx600n"]
+
+[ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="1_s558p"]
+
+[node name="sphere_pattern_a" type="Node2D"]
+
+[node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("1_s558p")]
+position = Vector2(-8, 431)
+
+[node name="Telegraphed_Sphere_Large2" parent="." instance=ExtResource("1_s558p")]
+position = Vector2(615, 420)
+
+[node name="Telegraphed_Sphere_Large3" parent="." instance=ExtResource("1_s558p")]
+position = Vector2(1158, 431)
+
+[node name="Telegraphed_Sphere_Large4" parent="." instance=ExtResource("1_s558p")]
+position = Vector2(-270, 970)
+
+[node name="Telegraphed_Sphere_Large5" parent="." instance=ExtResource("1_s558p")]
+position = Vector2(292, 947)
+
+[node name="Telegraphed_Sphere_Large6" parent="." instance=ExtResource("1_s558p")]
+position = Vector2(926, 943)
+
+[node name="Telegraphed_Sphere_Large7" parent="." instance=ExtResource("1_s558p")]
+position = Vector2(1427, 920)

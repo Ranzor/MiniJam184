@@ -14,6 +14,7 @@ var return_buttons: Array
 var credits_buttons
 
 func _ready():
+	AudioManager.play_music(preload("res://Audio/devMenu.wav"))
 	main_menu_buttons = [new_game_button,quit_button]
 	return_buttons = [toggle_credits_return_button]
 	credits_buttons = [toggle_credits_open_button]

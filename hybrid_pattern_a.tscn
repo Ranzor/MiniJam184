@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6oxnfb1y8a4h"]
+
+[ext_resource type="PackedScene" uid="uid://byuctw61tnfxq" path="res://telegraph_attack_vert_large.tscn" id="2_26141"]
+[ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="3_wxckc"]
+
+[node name="hybrid_pattern_a" type="Node2D"]
+
+[node name="telegraph_attack_vert" parent="." instance=ExtResource("2_26141")]
+position = Vector2(-90, -184)
+
+[node name="telegraph_attack_vert2" parent="." instance=ExtResource("2_26141")]
+position = Vector2(1155, -151)
+
+[node name="telegraph_attack_vert3" parent="." instance=ExtResource("2_26141")]
+position = Vector2(1414, -147)
+
+[node name="telegraph_attack_vert4" parent="." instance=ExtResource("2_26141")]
+position = Vector2(-345, -180)
+
+[node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("3_wxckc")]
+position = Vector2(273, 935)
+scale = Vector2(1.5, 1.5)
+
+[node name="Telegraphed_Sphere_Large2" parent="." instance=ExtResource("3_wxckc")]
+position = Vector2(844.25, 657.25)
+scale = Vector2(1.5, 1.5)
+
+[node name="Telegraphed_Sphere_Large3" parent="." instance=ExtResource("3_wxckc")]
+position = Vector2(827.25, 1284.25)
+scale = Vector2(1.5, 1.5)
