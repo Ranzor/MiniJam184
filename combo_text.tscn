@@ -24,13 +24,8 @@ offset_bottom = -0.0240059
 grow_horizontal = 2
 grow_vertical = 2
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 [node name="Outline" type="Label" parent="."]
-<<<<<<< HEAD
-=======
-=======
->>>>>>> Stashed changes
 [node name="combo_text_medium" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -152,10 +147,6 @@ offset_bottom = 40.0
 
 [node name="Outline" type="Label" parent="combo_text_small"]
 unique_name_in_owner = true
->>>>>>> Stashed changes
-=======
-unique_name_in_owner = true
->>>>>>> main
 layout_mode = 0
 offset_right = 173.0
 offset_bottom = 61.0
@@ -178,20 +169,8 @@ handle_input_locally = false
 size = Vector2i(177, 57)
 render_target_update_mode = 0
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[node name="text" type="Label" parent="SubViewportContainer/SubViewport"]
-=======
-=======
->>>>>>> Stashed changes
 [node name="TheText" type="Label" parent="combo_text_small/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
->>>>>>> Stashed changes
-=======
-[node name="TheText" type="Label" parent="SubViewportContainer/SubViewport"]
-unique_name_in_owner = true
->>>>>>> main
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
