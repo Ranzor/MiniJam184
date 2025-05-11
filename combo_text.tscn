@@ -1,11 +1,45 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6ex0s5lubu7c"]
+[gd_scene load_steps=15 format=3 uid="uid://c6ex0s5lubu7c"]
 
 [ext_resource type="Shader" uid="uid://i70tus11eh8j" path="res://Shaders/text_gradient.gdshader" id="1_j788w"]
 [ext_resource type="FontFile" uid="uid://cahid8cqr8q77" path="res://Art/Fonts/Inter-BlackItalic.otf" id="2_0hmwo"]
 
+[sub_resource type="Gradient" id="Gradient_2tr6c"]
+colors = PackedColorArray(1, 0.658824, 0, 1, 1, 0.537255, 0.164706, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_kcfpa"]
+gradient = SubResource("Gradient_2tr6c")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hyuhq"]
+shader = ExtResource("1_j788w")
+shader_parameter/gradient = SubResource("GradientTexture1D_kcfpa")
+shader_parameter/gradient_mix_amount = 1.0
+
+[sub_resource type="Gradient" id="Gradient_0hmwo"]
+colors = PackedColorArray(0.863405, 0.00026005, 0.000141889, 1, 0.92549, 0.843137, 0.109804, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2tr6c"]
+gradient = SubResource("Gradient_0hmwo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kcfpa"]
+shader = ExtResource("1_j788w")
+shader_parameter/gradient = SubResource("GradientTexture1D_2tr6c")
+shader_parameter/gradient_mix_amount = 1.0
+
+[sub_resource type="Gradient" id="Gradient_hyuhq"]
+offsets = PackedFloat32Array(0, 0.811475)
+colors = PackedColorArray(0, 0, 0, 1, 0.41, 0.41, 0.41, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1etki"]
+gradient = SubResource("Gradient_hyuhq")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_md2s5"]
+shader = ExtResource("1_j788w")
+shader_parameter/gradient = SubResource("GradientTexture1D_1etki")
+shader_parameter/gradient_mix_amount = 1.0
+
 [sub_resource type="Gradient" id="Gradient_j788w"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0, 0, 0, 1)
+offsets = PackedFloat32Array(0, 0.368852)
+colors = PackedColorArray(0.533575, 0.790007, 0.800178, 1, 7.9897e-06, 0.87568, 0.505365, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_0hmwo"]
 gradient = SubResource("Gradient_j788w")
@@ -24,8 +58,9 @@ offset_bottom = -0.0240059
 grow_horizontal = 2
 grow_vertical = 2
 
-
 [node name="Outline" type="Label" parent="."]
+layout_mode = 0
+
 [node name="combo_text_medium" type="Control" parent="."]
 visible = false
 layout_mode = 3
@@ -45,7 +80,7 @@ theme_override_font_sizes/font_size = 65
 text = "x8999"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="combo_text_medium"]
-material = SubResource("ShaderMaterial_2tr6c")
+material = SubResource("ShaderMaterial_hyuhq")
 layout_mode = 0
 offset_right = 238.0
 offset_bottom = 79.0
@@ -83,7 +118,7 @@ theme_override_font_sizes/font_size = 80
 text = "x8999"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="combo_text_large"]
-material = SubResource("ShaderMaterial_2tr6c")
+material = SubResource("ShaderMaterial_kcfpa")
 layout_mode = 0
 offset_right = 279.0
 offset_bottom = 91.0
@@ -103,6 +138,7 @@ theme_override_font_sizes/font_size = 80
 text = "x8999"
 
 [node name="combo_text_mega" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -120,7 +156,7 @@ theme_override_font_sizes/font_size = 100
 text = "x8999"
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="combo_text_mega"]
-material = SubResource("ShaderMaterial_2tr6c")
+material = SubResource("ShaderMaterial_md2s5")
 layout_mode = 0
 offset_right = 348.0
 offset_bottom = 110.0
@@ -129,7 +165,7 @@ offset_bottom = 110.0
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(348, 110)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="TheText" type="Label" parent="combo_text_mega/SubViewportContainer/SubViewport"]
 offset_right = 40.0
@@ -140,7 +176,6 @@ theme_override_font_sizes/font_size = 100
 text = "x8999"
 
 [node name="combo_text_small" type="Control" parent="."]
-visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -167,7 +202,7 @@ offset_bottom = 57.0
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(177, 57)
-render_target_update_mode = 0
+render_target_update_mode = 4
 
 [node name="TheText" type="Label" parent="combo_text_small/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true

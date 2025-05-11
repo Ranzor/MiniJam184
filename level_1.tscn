@@ -193,8 +193,9 @@ one_way_collision = true
 [node name="Player" parent="." instance=ExtResource("3_hn12h")]
 z_index = 10
 position = Vector2(-296, 888)
-jump_force = -1000
+jump_force = -800
 double_jump_force = -800
+gravity = 2000
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 734)
