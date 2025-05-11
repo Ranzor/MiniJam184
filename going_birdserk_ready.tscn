@@ -1,9 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4jm3lsxyd8vb"]
+[gd_scene load_steps=6 format=3 uid="uid://c4jm3lsxyd8vb"]
 
 [ext_resource type="Script" uid="uid://fcsr8sqttpeq" path="res://Scripts/going_birdserk_ready.gd" id="1_qcxps"]
 [ext_resource type="FontFile" uid="uid://cnxkd2vhp83sj" path="res://Art/Fonts/SourceSerif4-VariableFont_opsz,wght.ttf" id="1_wo78n"]
-[ext_resource type="AudioStream" uid="uid://bap3e6g0ccnl7" path="res://Audio/blip.wav" id="3_qmnal"]
-[ext_resource type="AudioStream" uid="uid://ibmhjtdmig7y" path="res://Audio/seagull-2-89447.mp3" id="4_qmnal"]
 
 [sub_resource type="Animation" id="Animation_xd8t6"]
 length = 0.001
@@ -90,30 +88,6 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("blop:playing")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("blip:playing")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_qcxps"]
@@ -214,30 +188,6 @@ tracks/7/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-tracks/8/type = "value"
-tracks/8/imported = false
-tracks/8/enabled = true
-tracks/8/path = NodePath("blop:playing")
-tracks/8/interp = 1
-tracks/8/loop_wrap = true
-tracks/8/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [true, true, true, true]
-}
-tracks/9/type = "value"
-tracks/9/imported = false
-tracks/9/enabled = true
-tracks/9/path = NodePath("blip:playing")
-tracks/9/interp = 1
-tracks/9/loop_wrap = true
-tracks/9/keys = {
-"times": PackedFloat32Array(0, 3.99),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qmnal"]
@@ -416,9 +366,3 @@ libraries = {
 &"": SubResource("AnimationLibrary_qmnal")
 }
 autoplay = "loading"
-
-[node name="blip" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_qmnal")
-
-[node name="blop" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_qmnal")
