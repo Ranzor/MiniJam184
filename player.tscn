@@ -1,6 +1,7 @@
-[gd_scene load_steps=31 format=3 uid="uid://dbbfcqml4u6ot"]
+[gd_scene load_steps=32 format=3 uid="uid://dbbfcqml4u6ot"]
 
 [ext_resource type="Script" uid="uid://bnf3w55vhwemh" path="res://Scripts/player.gd" id="1_4flbx"]
+[ext_resource type="PackedScene" uid="uid://bmlv1dce7svat" path="res://player_damage_taken.tscn" id="2_jm5j8"]
 [ext_resource type="Texture2D" uid="uid://6wkwkty35tbm" path="res://Art/Particles/rage_circle.png" id="2_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://cinrafn7y3aaf" path="res://Art/Player/player_attack_0001.png" id="2_pylmc"]
 [ext_resource type="Shader" uid="uid://dyou6ehuchptb" path="res://Shaders/outline.gdshader" id="3_5tmop"]
@@ -146,11 +147,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pylmc"]
 size = Vector2(129.5, 133)
 
-[node name="Player" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("hurt_particles") groups=["player"]]
 script = ExtResource("1_4flbx")
 jump_force = -500
 double_jump_force = -500
 beat_hit_delay = 1.1
+hurt_particles = NodePath("player_damage_taken")
 
 [node name="rage_4_particle" type="CPUParticles2D" parent="."]
 unique_name_in_owner = true
@@ -254,6 +256,8 @@ position = Vector2(2, 0)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaLeft"]
 position = Vector2(-105, 51.5)
 shape = SubResource("RectangleShape2D_pylmc")
+
+[node name="player_damage_taken" parent="." instance=ExtResource("2_jm5j8")]
 
 [connection signal="area_entered" from="AreaRight" to="." method="_on_area_2d_area_entered_right"]
 [connection signal="area_exited" from="AreaRight" to="." method="_on_area_2d_area_exited_right"]

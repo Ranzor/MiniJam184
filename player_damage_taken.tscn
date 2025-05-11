@@ -14,9 +14,11 @@ point_count = 2
 [node name="player_damage_taken" type="Node2D"]
 
 [node name="Feathers" type="CPUParticles2D" parent="."]
+emitting = false
 amount = 5
 texture = ExtResource("1_2a4vb")
 lifetime = 0.4
+one_shot = true
 explosiveness = 0.7
 randomness = 0.3
 emission_shape = 1
@@ -35,8 +37,10 @@ color = Color(0.780392, 0.756863, 0.756863, 1)
 
 [node name="Blood" type="CPUParticles2D" parent="."]
 rotation = -0.00126533
+emitting = false
 amount = 12
 texture = ExtResource("2_k15cs")
+one_shot = true
 explosiveness = 0.9
 randomness = 0.5
 emission_shape = 1

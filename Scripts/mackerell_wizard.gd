@@ -662,3 +662,6 @@ func _process(_delta: float) -> void:
 		$Sprite2D.flip_h = true
 	else:
 		$Sprite2D.flip_h = false
+	if hp <= 0:
+		SceneTransition.transition_to_scene("res://victory_screen.tscn")
+		AudioManager.stop_music()

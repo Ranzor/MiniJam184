@@ -23,7 +23,7 @@ func _on_timer_timeout():
 	$Label2.text = str(countdown)
 	if countdown <= 0:
 		AudioManager.stop_music()
-		SceneTransition.transition_to_scene("res://UI/MainMenu/main_menu.tscn")
+		SceneTransition.transition_to_scene("res://death_screen.tscn")
 		timer.stop()
 	
 

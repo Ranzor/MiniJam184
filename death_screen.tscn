@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://sxc0321w2f8i"]
+[gd_scene load_steps=6 format=3 uid="uid://sxc0321w2f8i"]
 
+[ext_resource type="Script" uid="uid://c4t2le2airpkj" path="res://Scripts/death_screen.gd" id="1_ex68u"]
 [ext_resource type="FontFile" uid="uid://cnxkd2vhp83sj" path="res://Art/Fonts/SourceSerif4-VariableFont_opsz,wght.ttf" id="1_if853"]
 
 [sub_resource type="Animation" id="Animation_r8dr5"]
@@ -118,6 +119,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ex68u")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

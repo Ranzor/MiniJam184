@@ -6,7 +6,7 @@ extends CharacterBody2D
 @export var gravity = 1200
 ## We divide the beat inverval by this to get the delay for the beat hit. So hight number = lower delay
 @export var beat_hit_delay : float = 2
-
+@export var hurt_particles : Node2D
 @export var rage_multiplier_modifier = 1
 
 var can_double_jump = false
@@ -27,6 +27,8 @@ var beat : int = 1
 
 var rage_counter : int = 0
 var rage_meter : Control
+
+var knockback = 0
 
 func _ready() -> void:
 	Beatbox.connect("beat", on_beat_toggle)
@@ -85,7 +87,10 @@ func _physics_process(delta: float) -> void:
 		deal_damage()
 		await $Sprite2D.animation_finished
 		is_attacking = false
-		
+	
+	velocity.x += knockback
+	knockback = move_toward(knockback,0, delta * 500)
+	
 	move_and_slide()
 
 	check_rage()
