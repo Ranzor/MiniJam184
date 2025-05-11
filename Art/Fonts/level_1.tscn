@@ -1,16 +1,18 @@
-[gd_scene load_steps=32 format=3 uid="uid://dsoxs44he2su5"]
+[gd_scene load_steps=34 format=3 uid="uid://dsoxs44he2su5"]
 
-[ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="1_3hls8"]
-[ext_resource type="Script" uid="uid://cimcwighlhlmo" path="res://GamaManager.gd" id="1_j7kpp"]
-[ext_resource type="Texture2D" uid="uid://bik83ruk8geor" path="res://Art/Environment/environment_foreground_platforms.png" id="2_hbghi"]
-[ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="3_hn12h"]
-[ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="4_ihfcg"]
-[ext_resource type="PackedScene" uid="uid://bcmkltd6vhcj1" path="res://hp_bar.tscn" id="5_rka8t"]
-[ext_resource type="Script" uid="uid://b2bng0xchq8ed" path="res://hp_bar.gd" id="7_bjebc"]
-[ext_resource type="PackedScene" uid="uid://c6ex0s5lubu7c" path="res://combo_text.tscn" id="8_5rr72"]
-[ext_resource type="Script" uid="uid://dgfw58o2t0rdb" path="res://combo_text.gd" id="9_gyffv"]
-[ext_resource type="PackedScene" uid="uid://c2bscbctunfpl" path="res://UI/Pause Menu/in_game_ui.tscn" id="10_gyffv"]
-[ext_resource type="PackedScene" uid="uid://dtou7lhrt785v" path="res://rage_meter.tscn" id="11_1pe0h"]
+[ext_resource type="Script" uid="uid://cimcwighlhlmo" path="res://GamaManager.gd" id="1_j6r30"]
+[ext_resource type="PackedScene" uid="uid://c2bscbctunfpl" path="res://UI/Pause Menu/in_game_ui.tscn" id="2_monjo"]
+[ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="3_lrdcf"]
+[ext_resource type="Texture2D" uid="uid://bik83ruk8geor" path="res://Art/Environment/environment_foreground_platforms.png" id="4_nvbmv"]
+[ext_resource type="PackedScene" uid="uid://blake4kuqcwwc" path="res://light.tscn" id="5_l1cy3"]
+[ext_resource type="PackedScene" uid="uid://dbbfcqml4u6ot" path="res://player.tscn" id="6_xexg0"]
+[ext_resource type="PackedScene" uid="uid://diifm6lqtsxqs" path="res://mackerell_wizard.tscn" id="7_7jhyg"]
+[ext_resource type="PackedScene" uid="uid://bcmkltd6vhcj1" path="res://hp_bar.tscn" id="8_25k3h"]
+[ext_resource type="Script" uid="uid://b2bng0xchq8ed" path="res://hp_bar.gd" id="9_6kgen"]
+[ext_resource type="PackedScene" uid="uid://c6ex0s5lubu7c" path="res://combo_text.tscn" id="10_e8yke"]
+[ext_resource type="Script" uid="uid://dgfw58o2t0rdb" path="res://combo_text.gd" id="11_fdqlt"]
+[ext_resource type="PackedScene" uid="uid://dtou7lhrt785v" path="res://rage_meter.tscn" id="12_c2hhu"]
+[ext_resource type="PackedScene" uid="uid://c17x8at1egp57" path="res://plank.tscn" id="13_monjo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(182, 1205)
@@ -73,9 +75,9 @@ size = Vector2(190.5, 20)
 size = Vector2(179, 14.5)
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_j7kpp")
+script = ExtResource("1_j6r30")
 
-[node name="inGameMenu_UI" parent="." instance=ExtResource("10_gyffv")]
+[node name="inGameMenu_UI" parent="." instance=ExtResource("2_monjo")]
 z_index = 100
 offset_left = 593.0
 offset_top = 786.0
@@ -88,12 +90,12 @@ visible = true
 [node name="EnvironmentBackground" type="Sprite2D" parent="."]
 position = Vector2(567.64, 735.86)
 scale = Vector2(1.64, 1.64)
-texture = ExtResource("1_3hls8")
+texture = ExtResource("3_lrdcf")
 
 [node name="EnvironmentForegroundPlatforms" type="Sprite2D" parent="."]
 position = Vector2(570.64, 733.86)
 scale = Vector2(1.64, 1.64)
-texture = ExtResource("2_hbghi")
+texture = ExtResource("4_nvbmv")
 
 [node name="Full Collision" type="StaticBody2D" parent="EnvironmentForegroundPlatforms"]
 position = Vector2(-553, -565)
@@ -191,7 +193,7 @@ position = Vector2(760.5, 311.75)
 shape = SubResource("RectangleShape2D_1pe0h")
 one_way_collision = true
 
-[node name="Player" parent="." instance=ExtResource("3_hn12h")]
+[node name="Player" parent="." instance=ExtResource("6_xexg0")]
 z_index = 10
 position = Vector2(-296, 888)
 jump_force = -800
@@ -202,7 +204,7 @@ gravity = 2000
 position = Vector2(576, 734)
 zoom = Vector2(0.35, 0.35)
 
-[node name="MackerellWizard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_ihfcg")]
+[node name="MackerellWizard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("7_7jhyg")]
 z_index = 5
 position = Vector2(608, 926)
 player = NodePath("../Player")
@@ -216,15 +218,15 @@ lane_positions = {
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
-[node name="HPBar" parent="CanvasLayer" instance=ExtResource("5_rka8t")]
-offset_left = -765.0
-offset_top = -181.0
-offset_right = -765.0
-offset_bottom = -181.0
+[node name="HPBar" parent="CanvasLayer" instance=ExtResource("8_25k3h")]
+offset_left = -725.0
+offset_top = -199.0
+offset_right = -725.0
+offset_bottom = -199.0
 scale = Vector2(2.395, 2.395)
-script = ExtResource("7_bjebc")
+script = ExtResource("9_6kgen")
 
-[node name="combo_text" parent="CanvasLayer" instance=ExtResource("8_5rr72")]
+[node name="combo_text" parent="CanvasLayer" instance=ExtResource("10_e8yke")]
 visible = false
 offset_left = -1009.0
 offset_top = 1557.0
@@ -232,14 +234,23 @@ offset_right = -1009.0
 offset_bottom = 1557.0
 scale = Vector2(2, 2)
 pivot_offset = Vector2(0, 60)
-script = ExtResource("9_gyffv")
+script = ExtResource("11_fdqlt")
 
-[node name="RageMeter" parent="CanvasLayer" instance=ExtResource("11_1pe0h")]
+[node name="RageMeter" parent="CanvasLayer" instance=ExtResource("12_c2hhu")]
 unique_name_in_owner = true
 offset_left = 1707.0
 offset_top = 1300.0
 offset_right = 1747.0
 offset_bottom = 1340.0
 scale = Vector2(2, 2)
+
+[node name="light" parent="." instance=ExtResource("5_l1cy3")]
+position = Vector2(703, 595)
+
+[node name="light2" parent="." instance=ExtResource("5_l1cy3")]
+position = Vector2(1328, 1052)
+
+[node name="plank" parent="." instance=ExtResource("13_monjo")]
+position = Vector2(-17, 1210)
 
 [editable path="inGameMenu_UI"]

@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://blake4kuqcwwc"]
+
+[ext_resource type="Texture2D" uid="uid://dcdygagk0k85a" path="res://Art/Environment/lamp.png" id="1_hdgcg"]
+[ext_resource type="Texture2D" uid="uid://cfhsf4ijbrq6o" path="res://Art/Environment/light_alpha.png" id="1_we4ua"]
+
+[sub_resource type="Animation" id="Animation_hdgcg"]
+resource_name = "in the wind"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 0.5),
+"update": 0,
+"values": [0.0, 0.0872665, -0.0872665, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_we4ua"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0872665]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5qqhr"]
+_data = {
+&"RESET": SubResource("Animation_we4ua"),
+&"in the wind": SubResource("Animation_hdgcg")
+}
+
+[node name="light" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+rotation = 0.0872665
+
+[node name="PointLight2D" type="PointLight2D" parent="Node2D"]
+position = Vector2(0, 52.5)
+color = Color(1, 0.788235, 0.129412, 1)
+energy = 0.5
+texture = ExtResource("1_we4ua")
+
+[node name="Lamp" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, 52.5)
+texture = ExtResource("1_hdgcg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Node2D/Lamp")
+libraries = {
+&"": SubResource("AnimationLibrary_5qqhr")
+}
+autoplay = "in the wind"
