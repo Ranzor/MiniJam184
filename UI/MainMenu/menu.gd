@@ -54,7 +54,7 @@ func toggle_visibility(object):
 
 func _on_new_game_button_pressed():
 	SceneTransition.transition_to_scene("res://going_birdserk_ready.tscn")
-
+	AudioManager.stop_music()
 
 func _on_quit_button_pressed():
 	get_tree().quit()
