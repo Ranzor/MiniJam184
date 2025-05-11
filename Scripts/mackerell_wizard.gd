@@ -24,10 +24,10 @@ enum LANES {TOP, HIGH, MID, LOW}
 }
 
 @onready var bpm = Beatbox.BPM
-@onready var beat_interval = bpm / 60
+@onready var beat_interval = bpm / 60.0
 var current_pattern = []
 
-var tot_dmg
+var tot_dmg : int = 0
 
 var hp : int = hp_max:
 	set(value):

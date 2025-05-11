@@ -2,6 +2,7 @@ extends Control
 
 var label1 : Label
 var label2 : Label
+var last_combo : int = 0
 
 func _ready() -> void:
 	Global.COMBO_TEXT = self
@@ -10,16 +11,21 @@ func _ready() -> void:
 	label2 = %TextTwoSmall
 
 func update_combo_text(combo: int) -> void:
+	if combo > last_combo:
+		%ComboTimerBar.reset_combo_bar_timer()
+	
+	last_combo = combo
 
 	set_labels(combo)
 
 	if combo == 0:
-		self.visible = false
+		%ComboTimerBar.visible = false
 		label1.text = ''
 		label2.text = ''
 		scale = Vector2(3, 3)
 		return
 	else:
+		%ComboTimerBar.visible = true
 		self.visible = true
 
 	var combo_text : String = 'x'
@@ -31,6 +37,7 @@ func update_combo_text(combo: int) -> void:
 	#scale += Vector2(combo*0.005, combo*0.005)
 
 func set_labels(combo: int) -> void:
+	print("Combo: ", combo)
 	if combo == 0:
 		%combo_text_small.visible = false
 		%combo_text_medium.visible = false
