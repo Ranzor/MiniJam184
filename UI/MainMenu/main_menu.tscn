@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://u1c3dahxx6i7"]
+[gd_scene load_steps=19 format=3 uid="uid://u1c3dahxx6i7"]
 
 [ext_resource type="Texture2D" uid="uid://mmginp5xf7r5" path="res://Art/UX_Sprite.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://clpw0o2mwygaj" path="res://UI/MainMenu/menu.gd" id="1_fu7sn"]
 [ext_resource type="FontFile" uid="uid://d4a6stgcu2hxo" path="res://Art/Fonts/Inter-Black.otf" id="2_7vrkn"]
+[ext_resource type="FontFile" uid="uid://8yj15aqor2ax" path="res://Art/Fonts/RustyAttackDemo-d9X8l.otf" id="2_iyy2y"]
 [ext_resource type="FontFile" uid="uid://dyy1lfvmotoow" path="res://Art/Fonts/Inkfree.ttf" id="4_jix8l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_06t4h"]
@@ -654,6 +655,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [node name="main_menu" type="MarginContainer" parent="." node_paths=PackedStringArray("credits_screen", "new_game_button", "quit_button", "toggle_credits_return_button", "toggle_credits_open_button")]
 layout_mode = 1
 anchors_preset = 15
@@ -678,12 +688,12 @@ layout_mode = 2
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0.313726, 0.121569, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.764706)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.761257, 0.0816129, 2.88785e-07, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 0.764706)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 8
 theme_override_constants/shadow_outline_size = 24
-theme_override_fonts/font = ExtResource("2_7vrkn")
+theme_override_fonts/font = ExtResource("2_iyy2y")
 theme_override_font_sizes/font_size = 70
 text = "Birdserker
 "
@@ -735,7 +745,7 @@ custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_color = Color(0.172549, 0.262745, 0.203922, 1)
+theme_override_colors/font_color = Color(1, 0.262745, 0.203922, 1)
 theme_override_fonts/font = ExtResource("2_7vrkn")
 theme_override_styles/hover = SubResource("StyleBoxTexture_06t4h")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_06t4h")
@@ -832,7 +842,7 @@ custom_minimum_size = Vector2(70, 30)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_color = Color(0.172549, 0.262745, 0.203922, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_jix8l")
 theme_override_font_sizes/font_size = 14
 theme_override_styles/hover = SubResource("StyleBoxTexture_glbon")
