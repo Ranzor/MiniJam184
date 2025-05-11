@@ -5,13 +5,13 @@
 [node name="Beam_Pattern_B" type="Node2D"]
 
 [node name="telegraph_attack_vert" parent="." instance=ExtResource("1_jfdrp")]
-position = Vector2(-522, -163)
+position = Vector2(-279, -172)
 
 [node name="telegraph_attack_vert2" parent="." instance=ExtResource("1_jfdrp")]
-position = Vector2(54, -163)
+position = Vector2(-89, -170)
 
 [node name="telegraph_attack_vert3" parent="." instance=ExtResource("1_jfdrp")]
-position = Vector2(1186, -163)
+position = Vector2(513, -138)
 
 [node name="telegraph_attack_vert4" parent="." instance=ExtResource("1_jfdrp")]
-position = Vector2(1792, -163)
+position = Vector2(759, -144)

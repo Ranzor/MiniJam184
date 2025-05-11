@@ -6,22 +6,25 @@
 [node name="hybrid_pattern_b" type="Node2D"]
 
 [node name="telegraph_attack_vert" parent="." instance=ExtResource("2_eyir7")]
-position = Vector2(-90, -184)
+position = Vector2(69, -186)
 
 [node name="telegraph_attack_vert2" parent="." instance=ExtResource("2_eyir7")]
-position = Vector2(1155, -151)
+position = Vector2(1186, -132)
 
 [node name="telegraph_attack_vert3" parent="." instance=ExtResource("2_eyir7")]
-position = Vector2(1414, -147)
+position = Vector2(1434, -141)
 
 [node name="telegraph_attack_vert4" parent="." instance=ExtResource("2_eyir7")]
-position = Vector2(-345, -180)
+position = Vector2(-182, -180)
 
 [node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("3_xyxh5")]
-position = Vector2(865, 977)
+position = Vector2(875, 978)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large2" parent="." instance=ExtResource("3_xyxh5")]
-position = Vector2(193, 664)
+position = Vector2(394, 685)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large3" parent="." instance=ExtResource("3_xyxh5")]
-position = Vector2(184, 1291)
+position = Vector2(400, 1366)
+scale = Vector2(1.5, 1.5)
