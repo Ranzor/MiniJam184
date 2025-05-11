@@ -48,7 +48,7 @@ func reset():
 	audio_position = 0.0
 	total_beats = 0
 	
-	AudioManager.play_music(preload("res://Audio/Hoved mel 8.mp3"))
+	AudioManager.play_music(preload("res://Audio/Maakemann.wav"))
 	timer.start()
 	
 	var music_player = AudioManager.get_current_music_player()
