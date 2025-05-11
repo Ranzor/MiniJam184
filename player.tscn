@@ -1,9 +1,9 @@
-[gd_scene load_steps=28 format=3 uid="uid://dbbfcqml4u6ot"]
+[gd_scene load_steps=31 format=3 uid="uid://dbbfcqml4u6ot"]
 
 [ext_resource type="Script" uid="uid://bnf3w55vhwemh" path="res://Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://6wkwkty35tbm" path="res://Art/Particles/rage_circle.png" id="2_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://cinrafn7y3aaf" path="res://Art/Player/player_attack_0001.png" id="2_pylmc"]
-[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="3_5tmop"]
+[ext_resource type="Shader" uid="uid://dyou6ehuchptb" path="res://Shaders/outline.gdshader" id="3_5tmop"]
 [ext_resource type="Texture2D" uid="uid://cycbb4ux5t23d" path="res://Art/Player/player_run_0000.png" id="3_606se"]
 [ext_resource type="Texture2D" uid="uid://87caycmjso82" path="res://Art/Player/player_attack_0002.png" id="3_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://bihwae42nbdnl" path="res://Art/Player/player_jump_0001.png" id="3_u1c27"]
@@ -11,11 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://p6ccliyiohwa" path="res://Art/Player/player_jump_0002.png" id="4_q13i1"]
 [ext_resource type="Texture2D" uid="uid://mqysdgpybh3p" path="res://Art/Player/player_run_0001.png" id="4_u1c27"]
 [ext_resource type="Texture2D" uid="uid://ctp6wg8htyntf" path="res://Art/Player/player_run_0002.png" id="5_op7ga"]
+[ext_resource type="Texture2D" uid="uid://dsrsv0dmw8yyu" path="res://Art/Player/player_idle_0000.png" id="6_dx0e4"]
 [ext_resource type="Texture2D" uid="uid://b5soe2ouv7ut3" path="res://Art/Player/player_run_0003.png" id="6_q13i1"]
 [ext_resource type="Texture2D" uid="uid://crxvi5xnojwdn" path="res://Art/Player/player_run_0004.png" id="7_pylmc"]
 [ext_resource type="Texture2D" uid="uid://c5buvktl820ey" path="res://Art/Player/player_run_0005.png" id="8_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://clv3fe8on7ky8" path="res://Art/Player/player_run_0006.png" id="9_5tmop"]
+[ext_resource type="Texture2D" uid="uid://dr0y1v57f8pfx" path="res://Art/Player/player_crouch_0000.png" id="9_jm5j8"]
 [ext_resource type="Texture2D" uid="uid://divqgrr68ajgt" path="res://Art/Player/player_run_0007.png" id="10_7ahtn"]
+[ext_resource type="Texture2D" uid="uid://b8bo4c686nxso" path="res://Art/Player/player_crouch_0001.png" id="10_7hik5"]
 [ext_resource type="Texture2D" uid="uid://bnyxnnnk37fxe" path="res://Art/Player/player_run_0008.png" id="11_7lmhl"]
 [ext_resource type="Texture2D" uid="uid://dtnjl88f2ql4d" path="res://Art/Player/player_run_0009.png" id="12_dx0e4"]
 [ext_resource type="Texture2D" uid="uid://dh8rnqu0wm5y7" path="res://Art/Player/player_run_0010.png" id="13_jm5j8"]
@@ -51,6 +54,9 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_dx0e4")
+}, {
+"duration": 1.0,
 "texture": ExtResource("3_606se")
 }],
 "loop": true,
@@ -64,6 +70,17 @@ animations = [{
 "loop": true,
 "name": &"double_jump",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_jm5j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7hik5")
+}],
+"loop": true,
+"name": &"duck",
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -217,10 +234,7 @@ shape = SubResource("RectangleShape2D_4flbx")
 texture_filter = 2
 material = SubResource("ShaderMaterial_pbfsw")
 sprite_frames = SubResource("SpriteFrames_2wuci")
-animation = &"run"
 flip_h = true
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="AreaRight" type="Area2D" parent="."]
 unique_name_in_owner = true

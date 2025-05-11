@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://diifm6lqtsxqs"]
+[gd_scene load_steps=24 format=3 uid="uid://diifm6lqtsxqs"]
 
 [ext_resource type="Script" uid="uid://c0hftlrsgxvth" path="res://Scripts/mackerell_wizard.gd" id="1_nre6u"]
 [ext_resource type="PackedScene" uid="uid://7gtbrduojjps" path="res://projectile.tscn" id="2_ke8kv"]
@@ -19,9 +19,27 @@
 [ext_resource type="Script" uid="uid://mk3ehila12mo" path="res://mackerell_hitbox.gd" id="8_ke8kv"]
 [ext_resource type="PackedScene" uid="uid://c6oxnfb1y8a4h" path="res://hybrid_pattern_a.tscn" id="8_q0kel"]
 [ext_resource type="PackedScene" uid="uid://b617w7lm7d8u6" path="res://hybrid_pattern_b.tscn" id="9_rrflq"]
+[ext_resource type="Texture2D" uid="uid://degjho8p6cm5a" path="res://Art/mackerell wizard/mw_attack_0000.png" id="13_itipt"]
+[ext_resource type="Texture2D" uid="uid://baebe5v1ay00y" path="res://Art/mackerell wizard/mw_damage_taken_0001.png" id="14_l3y15"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4viln"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_itipt")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_l3y15")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_nre6u")
@@ -43,7 +61,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 20.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nre6u"]
@@ -67,13 +85,12 @@ hybrid_pattern_b = ExtResource("9_rrflq")
 sprite_frames = SubResource("SpriteFrames_4viln")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.943536
+frame = 5
+frame_progress = 0.274712
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6, 56)
 shape = SubResource("RectangleShape2D_nre6u")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 [node name="beat_timer" type="Timer" parent="."]
 

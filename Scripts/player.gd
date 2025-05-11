@@ -80,6 +80,8 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("duck") and is_on_floor() and not is_attacking:
 		$CollisionShape2D.scale.y = 0.5
 		beat_action("duck")
+	elif Input.is_action_pressed("duck") and is_on_floor() and not is_attacking:
+			$Sprite2D.play("duck")
 	elif Input.is_action_just_released("duck") and not is_attacking:
 		$CollisionShape2D.scale.y = 1.0
 		

@@ -43,66 +43,98 @@ func _ready() -> void:
 	Global.MAX_HP = hp_max
 
 func on_beat():
+	$Sprite2D.play("idle")
 	var atk
 	if Beatbox.total_beats == 5:
+		$Sprite2D.play("attack")
 		atk = beam_pattern_a.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 		
 	if Beatbox.total_beats == 10:
+		$Sprite2D.play("attack")
 		atk = beam_pattern_b.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 	
 	if Beatbox.total_beats == 15:
+		$Sprite2D.play("attack")
 		atk = sphere_pattern_a.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+			
 			
 	if Beatbox.total_beats == 20:
+		$Sprite2D.play("attack")
 		atk = sphere_pattern_b.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 			
 	if Beatbox.total_beats == 25:
+		$Sprite2D.play("attack")
 		atk = sphere_pattern_c.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 			
 	if Beatbox.total_beats == 30:
+		$Sprite2D.play("attack")
 		atk = hybrid_pattern_a.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 			
 	if Beatbox.total_beats == 35:
+		$Sprite2D.play("attack")
 		atk = hybrid_pattern_b.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 	
 	if Beatbox.total_beats == 40:
+		$Sprite2D.play("attack")
 		atk = beam_pattern_c.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 	
 	if Beatbox.total_beats == 45:
+		$Sprite2D.play("attack")
 		atk = beam_pattern_d.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 	
 	if Beatbox.total_beats == 50:
+		$Sprite2D.play("attack")
 		atk = beam_pattern_e.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 
 	if current_pattern.is_empty() and Beatbox.beat_count == 2:
 		fire_projectile(LANES.values().pick_random())
@@ -137,10 +169,12 @@ func take_damage(damage: int) -> void:
 	# Handle damage logic here
 	print("Mackerell took damage: ", damage)
 	hp -= damage
+	$Sprite2D.play("hurt")
+	await $Sprite2D.animation_finished
+	$Sprite2D.play("idle")
 	
 func _process(_delta: float) -> void:
 	if player.position.x > position.x:
 		$Sprite2D.flip_h = true
 	else:
 		$Sprite2D.flip_h = false
-	
