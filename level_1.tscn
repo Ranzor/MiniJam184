@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dsoxs44he2su5"]
+[gd_scene load_steps=31 format=3 uid="uid://dsoxs44he2su5"]
 
 [ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="1_3hls8"]
 [ext_resource type="Script" uid="uid://cimcwighlhlmo" path="res://GamaManager.gd" id="1_j7kpp"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://b2bng0xchq8ed" path="res://hp_bar.gd" id="7_bjebc"]
 [ext_resource type="PackedScene" uid="uid://c6ex0s5lubu7c" path="res://combo_text.tscn" id="8_5rr72"]
 [ext_resource type="Script" uid="uid://dgfw58o2t0rdb" path="res://combo_text.gd" id="9_gyffv"]
-[ext_resource type="PackedScene" uid="uid://c2bscbctunfpl" path="res://UI/Pause Menu/in_game_ui.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://dtou7lhrt785v" path="res://rage_meter.tscn" id="11_1pe0h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
@@ -74,16 +73,6 @@ size = Vector2(179, 14.5)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_j7kpp")
-
-[node name="inGameMenu_UI" parent="." instance=ExtResource("10_gyffv")]
-z_index = 100
-offset_left = 593.0
-offset_top = 786.0
-offset_right = 593.0
-offset_bottom = 786.0
-
-[node name="popupMenu" parent="inGameMenu_UI" index="0"]
-visible = true
 
 [node name="EnvironmentBackground" type="Sprite2D" parent="."]
 position = Vector2(567.64, 735.86)
@@ -241,5 +230,3 @@ offset_top = 1300.0
 offset_right = 1747.0
 offset_bottom = 1340.0
 scale = Vector2(2, 2)
-
-[editable path="inGameMenu_UI"]
