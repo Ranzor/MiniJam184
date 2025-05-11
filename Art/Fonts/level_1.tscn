@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://dsoxs44he2su5"]
+[gd_scene load_steps=33 format=3 uid="uid://ufu1rumxkk0y"]
 
 [ext_resource type="Script" uid="uid://cimcwighlhlmo" path="res://GamaManager.gd" id="1_j6r30"]
 [ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="3_lrdcf"]
