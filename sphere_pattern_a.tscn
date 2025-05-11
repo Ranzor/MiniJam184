@@ -1,11 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://ba3bym5gx600n"]
 
-[ext_resource type="PackedScene" uid="uid://dkgblnq7a1fwi" path="res://level_1.tscn" id="1_2cuvb"]
 [ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="1_s558p"]
 
 [node name="sphere_pattern_a" type="Node2D"]
-
-[node name="Node2D" parent="." instance=ExtResource("1_2cuvb")]
 
 [node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("1_s558p")]
 position = Vector2(0.25, 533.25)
