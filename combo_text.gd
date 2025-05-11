@@ -31,16 +31,37 @@ func update_combo_text(combo: int) -> void:
 	#scale += Vector2(combo*0.005, combo*0.005)
 
 func set_labels(combo: int) -> void:
+	if combo == 0:
+		%combo_text_small.visible = false
+		%combo_text_medium.visible = false
+		%combo_text_large.visible = false
+		%combo_text_mega.visible = false
 	if combo < 10:
 		label1 = %TextOneSmall
 		label2 = %TextTwoSmall
+		%combo_text_small.visible = true
+		%combo_text_medium.visible = false
+		%combo_text_large.visible = false
+		%combo_text_mega.visible = false
 	elif combo < 25:
 		label1 = %TextOneMedium
 		label2 = %TextTwoMedium
-	elif combo < 40:
+		%combo_text_small.visible = false
+		%combo_text_medium.visible = true
+		%combo_text_large.visible = false
+		%combo_text_mega.visible = false
+	elif combo < 50:
 		label1 = %TextOneLarge
 		label2 = %TextTwoLarge
-	elif combo > 49:
+		%combo_text_small.visible = false
+		%combo_text_medium.visible = false
+		%combo_text_large.visible = true
+		%combo_text_mega.visible = false
+	else:
 		label1 = %TextOneMega
 		label2 = %TextTwoMega
+		%combo_text_small.visible = false
+		%combo_text_medium.visible = false
+		%combo_text_large.visible = false
+		%combo_text_mega.visible = true
 	

@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var double_jump_force = -350
 @export var gravity = 1200
 ## We divide the beat inverval by this to get the delay for the beat hit. So hight number = lower delay
-@export var beat_hit_delay = 2
+@export var beat_hit_delay : float = 2
 
 @export var base_damage = 1
 @export var attack_on_beat_multiplier_value = 1.0
@@ -32,7 +32,7 @@ var attacks_on_beat : int = 0
 var on_beat = false
 var beat : int = 1
 
-var rage_counter : int = 1
+var rage_counter : int = 0
 var rage_meter : Control
 
 func _ready() -> void:
@@ -115,6 +115,7 @@ func deal_damage():
 		deal_damage_to_target(target_left)
 
 func deal_damage_to_target(target : StaticBody2D):
+	on_beat = true
 	if on_beat:
 		attack_on_beat_multiplier *= increase_attack_bonus()
 	else:
