@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://b2bng0xchq8ed" path="res://hp_bar.gd" id="7_bjebc"]
 [ext_resource type="PackedScene" uid="uid://c6ex0s5lubu7c" path="res://combo_text.tscn" id="8_5rr72"]
 [ext_resource type="Script" uid="uid://dgfw58o2t0rdb" path="res://combo_text.gd" id="9_gyffv"]
-[ext_resource type="PackedScene" uid="uid://dtou7lhrt785v" path="res://rage_meter.tscn" id="10_gyffv"]
 [ext_resource type="PackedScene" uid="uid://c2bscbctunfpl" path="res://UI/Pause Menu/in_game_ui.tscn" id="10_gyffv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
@@ -219,6 +218,7 @@ scale = Vector2(2.395, 2.395)
 script = ExtResource("7_bjebc")
 
 [node name="combo_text" parent="CanvasLayer" instance=ExtResource("8_5rr72")]
+visible = false
 offset_left = -1009.0
 offset_top = 1557.0
 offset_right = -1009.0
@@ -234,4 +234,5 @@ offset_top = -177.0
 offset_right = -1009.0
 offset_bottom = -137.0
 scale = Vector2(2, 2)
+
 [editable path="inGameMenu_UI"]
