@@ -58,7 +58,6 @@ texture = SubResource("AtlasTexture_ggavl")
 
 [node name="Rage_1" type="TextureRect" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 0
 offset_left = 25.0
 offset_top = 52.0
@@ -68,7 +67,6 @@ texture = SubResource("AtlasTexture_65or1")
 
 [node name="Rage_2" type="TextureRect" parent="."]
 unique_name_in_owner = true
-visible = false
 layout_mode = 0
 offset_left = 21.0
 offset_top = 52.0
@@ -78,6 +76,7 @@ texture = SubResource("AtlasTexture_lhbbi")
 
 [node name="Rage_3" type="TextureRect" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 4.0
 offset_top = 47.0

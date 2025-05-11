@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bnf3w55vhwemh" path="res://Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://6wkwkty35tbm" path="res://Art/Particles/rage_circle.png" id="2_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://cinrafn7y3aaf" path="res://Art/Player/player_attack_0001.png" id="2_pylmc"]
-[ext_resource type="Shader" uid="uid://dyou6ehuchptb" path="res://Shaders/outline.gdshader" id="3_5tmop"]
+[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="3_5tmop"]
 [ext_resource type="Texture2D" uid="uid://cycbb4ux5t23d" path="res://Art/Player/player_run_0000.png" id="3_606se"]
 [ext_resource type="Texture2D" uid="uid://87caycmjso82" path="res://Art/Player/player_attack_0002.png" id="3_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://bihwae42nbdnl" path="res://Art/Player/player_jump_0001.png" id="3_u1c27"]

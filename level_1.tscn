@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dsoxs44he2su5"]
+[gd_scene load_steps=32 format=3 uid="uid://dsoxs44he2su5"]
 
 [ext_resource type="Texture2D" uid="uid://ceyknqcgsn6rx" path="res://Art/Environment/environment_background.png" id="1_3hls8"]
 [ext_resource type="Script" uid="uid://cimcwighlhlmo" path="res://GamaManager.gd" id="1_j7kpp"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c6ex0s5lubu7c" path="res://combo_text.tscn" id="8_5rr72"]
 [ext_resource type="Script" uid="uid://dgfw58o2t0rdb" path="res://combo_text.gd" id="9_gyffv"]
 [ext_resource type="PackedScene" uid="uid://c2bscbctunfpl" path="res://UI/Pause Menu/in_game_ui.tscn" id="10_gyffv"]
+[ext_resource type="PackedScene" uid="uid://dtou7lhrt785v" path="res://rage_meter.tscn" id="11_1pe0h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
 size = Vector2(182, 1205)
@@ -227,12 +228,12 @@ scale = Vector2(2, 2)
 pivot_offset = Vector2(0, 60)
 script = ExtResource("9_gyffv")
 
-[node name="RageMeter" parent="CanvasLayer" instance=ExtResource("10_gyffv")]
+[node name="RageMeter" parent="CanvasLayer" instance=ExtResource("11_1pe0h")]
 unique_name_in_owner = true
-offset_left = -1049.0
-offset_top = -177.0
-offset_right = -1009.0
-offset_bottom = -137.0
+offset_left = 1707.0
+offset_top = 1300.0
+offset_right = 1747.0
+offset_bottom = 1340.0
 scale = Vector2(2, 2)
 
 [editable path="inGameMenu_UI"]
