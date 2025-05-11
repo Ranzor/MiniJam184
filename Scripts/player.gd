@@ -7,8 +7,6 @@ extends CharacterBody2D
 ## We divide the beat inverval by this to get the delay for the beat hit. So hight number = lower delay
 @export var beat_hit_delay : float = 2
 
-@export var base_damage = 1
-@export var attack_on_beat_multiplier = 1.0
 @export var rage_multiplier_modifier = 1
 
 var can_double_jump = false
@@ -127,8 +125,11 @@ func deal_damage_to_target(target : Node2D):
 	target.take_damage(calc_damage())
 	
 func calc_damage() -> float:
+	var combo : int = Global.combo
+	if Global.combo <= 0:
+		combo = 1
 
-	return base_damage + (attack_on_beat_multiplier * Global.combo) + (rage_multiplier_modifier * rage_counter)
+	return combo + (rage_multiplier_modifier * rage_counter)
 
 
 func beat_action(action_type):
