@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ke1mny3dus28"]
+
+[ext_resource type="Texture2D" uid="uid://mmginp5xf7r5" path="res://Art/UX_Sprite.png" id="1_ccida"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bqpb"]
+atlas = ExtResource("1_ccida")
+region = Rect2(913, 147, 254, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ourkk"]
+atlas = ExtResource("1_ccida")
+region = Rect2(914, 166, 252, 10)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+value = 50.0
+fill_mode = 1
+texture_under = SubResource("AtlasTexture_4bqpb")
+texture_progress = SubResource("AtlasTexture_ourkk")
