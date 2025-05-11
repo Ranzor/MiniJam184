@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce2t1vygyduy3"]
+
+[ext_resource type="Texture2D" uid="uid://gjvbxqjyiybx" path="res://Art/Particles/drop.png" id="1_e1gaw"]
+[ext_resource type="Texture2D" uid="uid://6wkwkty35tbm" path="res://Art/Particles/rage_circle.png" id="2_swx4q"]
+
+[sub_resource type="Curve" id="Curve_s278b"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.983562, 0.144004), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_7fvru"]
+_data = [Vector2(0, 0.965203), 0.0, 0.0, 0, 0, Vector2(0.989041, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="boss_damage_taken" type="Node2D"]
+
+[node name="Blood" type="CPUParticles2D" parent="."]
+rotation = -0.00126533
+amount = 12
+texture = ExtResource("2_swx4q")
+explosiveness = 0.9
+randomness = 0.5
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0, 0)
+spread = 50.0
+gravity = Vector2(-150, -300)
+initial_velocity_min = 20.0
+initial_velocity_max = 30.0
+orbit_velocity_max = 0.3
+scale_amount_min = 0.3
+scale_amount_max = 0.6
+scale_amount_curve = SubResource("Curve_s278b")
+color = Color(1, 0, 0, 1)
+
+[node name="Water" type="CPUParticles2D" parent="."]
+amount = 5
+texture = ExtResource("1_e1gaw")
+lifetime = 0.6
+explosiveness = 0.7
+randomness = 0.3
+emission_shape = 1
+emission_sphere_radius = 20.0
+direction = Vector2(0, 0)
+spread = 120.0
+gravity = Vector2(-200, -1000)
+initial_velocity_min = 50.0
+initial_velocity_max = 75.0
+angular_velocity_min = -20.0
+angular_velocity_max = 20.0
+angle_min = -45.0
+angle_max = 45.0
+scale_amount_min = 0.1
+scale_amount_curve = SubResource("Curve_7fvru")
+color = Color(0.290196, 0.866667, 0.960784, 1)

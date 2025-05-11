@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwkgyiuhhdqsm"]
+
+[ext_resource type="Texture2D" uid="uid://yif6pdjxx6rh" path="res://Art/Particles/small_circle.png" id="1_x438m"]
+
+[sub_resource type="Curve" id="Curve_q3pri"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.975343, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_q3pri"]
+offsets = PackedFloat32Array(0, 0.519174, 0.589971)
+colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 1, 0.767025, 2.52686e-06, 9.62615e-07, 1)
+
+[node name="combo_increase" type="Node2D"]
+
+[node name="combo_small" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 50
+texture = ExtResource("1_x438m")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+direction = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 40.0
+initial_velocity_max = 40.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_q3pri")
+color_ramp = SubResource("Gradient_q3pri")
+
+[node name="combo_medium" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 100
+texture = ExtResource("1_x438m")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+direction = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 45.0
+initial_velocity_max = 45.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_q3pri")
+color_ramp = SubResource("Gradient_q3pri")
+
+[node name="combo_large" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 300
+texture = ExtResource("1_x438m")
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+direction = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 60.0
+initial_velocity_max = 60.0
+scale_amount_max = 2.0
+scale_amount_curve = SubResource("Curve_q3pri")
+color_ramp = SubResource("Gradient_q3pri")
+
+[node name="combo_mega" type="CPUParticles2D" parent="."]
+amount = 300
+texture = ExtResource("1_x438m")
+lifetime = 0.5
+explosiveness = 1.0
+local_coords = true
+direction = Vector2(1, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 60.0
+initial_velocity_max = 80.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_q3pri")
+color_ramp = SubResource("Gradient_q3pri")
