@@ -18,7 +18,6 @@ func _process(delta: float) -> void:
 	
 	if Beatbox.total_beats == target_beat:
 		if can_hit:
-			print("hit")
 			Global.combo -= damage
 			can_hit = false
 			pass

@@ -37,7 +37,6 @@ func update_combo_text(combo: int) -> void:
 	#scale += Vector2(combo*0.005, combo*0.005)
 
 func set_labels(combo: int) -> void:
-	print("Combo: ", combo)
 	if combo == 0:
 		%combo_text_small.visible = false
 		%combo_text_medium.visible = false

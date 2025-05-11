@@ -56,7 +56,6 @@ func toggle_visibility(object):
 	else:
 		animation_type = "open_"
 		
-	print(animation_type + str(object.name))
 	animation.play(animation_type + str(object.name))
 
 

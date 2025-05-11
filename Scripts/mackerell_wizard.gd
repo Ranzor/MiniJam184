@@ -316,10 +316,8 @@ func spawn_in_view(scene: PackedScene, padding: float = 50.0) -> Sprite2D:
 	
 func take_damage(damage: int) -> void:
 	# Handle damage logic here
-	print("Mackerell took damage: ", damage)
 	hp -= damage
 	tot_dmg += damage
-	print("Total Damage: ", tot_dmg)
 	$Sprite2D.play("hurt")
 	await $Sprite2D.animation_finished
 	$Sprite2D.play("idle")
