@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 			Global.combo -= damage
 			can_hit = false
 			pass
-		for i in get_children():
+		for i in %SpriteGroup.get_children():
 			i.texture = atk
 	
 	if Beatbox.total_beats == target_beat + 1:

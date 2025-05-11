@@ -10,8 +10,6 @@ extends CharacterBody2D
 @export var base_damage = 1
 @export var attack_on_beat_multiplier_value = 1.0
 @export var attack_on_beat_multiplier_base = 1.0
-@export var attack_on_beat_ramping_pace = 5
-@export var attack_on_beat_ramping_increase = 0.5
 @export var rage_multiplier_modifier = 1
 
 var can_double_jump = false
@@ -26,7 +24,6 @@ var target_right : Node2D
 var target_left : Node2D
 var attacking_right : bool = true
 var attack_on_beat_multiplier : float = 1
-var attack_on_beat_ramping_value : float = 0.0
 
 var combo_timer_bar : Control
 var on_beat = false
@@ -125,23 +122,15 @@ func deal_damage():
 
 func deal_damage_to_target(target : Node2D):
 	if on_beat:
-		attack_on_beat_multiplier *= increase_attack_bonus()
+		Global.combo += 2
 	else:
-		attack_on_beat_multiplier = 0
-		attack_on_beat_ramping_value = 0
 		Global.combo += 1
 
-	target.take_damage(base_damage + attack_on_beat_multiplier)
+	target.take_damage(base_damage + calc_damage())
 	
-func increase_attack_bonus() -> float:
-	Global.combo += 2
+func calc_damage() -> float:
 
-	if Global.combo % attack_on_beat_ramping_pace == 0:
-		attack_on_beat_ramping_value += attack_on_beat_ramping_increase
-
-	attack_on_beat_multiplier = attack_on_beat_multiplier_base + (attack_on_beat_multiplier_value * (Global.combo+attack_on_beat_ramping_value)) * (1 + (rage_counter*rage_multiplier_modifier))
-	
-	return attack_on_beat_ramping_value + attack_on_beat_multiplier_value
+	return base_damage + (attack_on_beat_multiplier_base * Global.combo)
 
 
 func beat_action(action_type):

@@ -14,72 +14,75 @@ script = ExtResource("1_aex36")
 tele = ExtResource("1_ukghf")
 atk = ExtResource("3_aex36")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="SpriteGroup" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Sprite2D" type="Sprite2D" parent="SpriteGroup"]
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sprite2D2" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 168)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Sprite2D3" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 335)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D4" type="Sprite2D" parent="."]
+[node name="Sprite2D4" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 500)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D5" type="Sprite2D" parent="."]
+[node name="Sprite2D5" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 663)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D6" type="Sprite2D" parent="."]
+[node name="Sprite2D6" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 831)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D7" type="Sprite2D" parent="."]
+[node name="Sprite2D7" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 998)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D8" type="Sprite2D" parent="."]
+[node name="Sprite2D8" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 1163)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D9" type="Sprite2D" parent="."]
+[node name="Sprite2D9" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 1326)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D10" type="Sprite2D" parent="."]
+[node name="Sprite2D10" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 1494)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D11" type="Sprite2D" parent="."]
+[node name="Sprite2D11" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 1661)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
 
-[node name="Sprite2D12" type="Sprite2D" parent="."]
+[node name="Sprite2D12" type="Sprite2D" parent="SpriteGroup"]
 position = Vector2(0, 1826)
 texture = ExtResource("1_ukghf")
 region_enabled = true

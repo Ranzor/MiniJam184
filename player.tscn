@@ -150,6 +150,7 @@ size = Vector2(129.5, 133)
 script = ExtResource("1_4flbx")
 jump_force = -500
 double_jump_force = -500
+beat_hit_delay = 1.1
 
 [node name="rage_4_particle" type="CPUParticles2D" parent="."]
 unique_name_in_owner = true
