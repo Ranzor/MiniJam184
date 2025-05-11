@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Node2D
 
 enum LANES {TOP, HIGH, MID, LOW}
 @export var hp_max : int = 100
@@ -31,8 +31,8 @@ var tot_dmg : int = 0
 
 var hp : int = hp_max:
 	set(value):
+		Global.HP_BAR.update_hp_bar(hp, hp-value)
 		hp = value
-		Global.HP_BAR.update_hp_bar(hp)
 
 func _ready() -> void:
 	Beatbox.connect("beat",on_beat)

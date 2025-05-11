@@ -22,8 +22,8 @@ var beat_timer = 0.0
 
 var is_attacking = false
 
-var target_right : StaticBody2D
-var target_left : StaticBody2D
+var target_right : Node2D
+var target_left : Node2D
 var attacking_right : bool = true
 var attack_on_beat_multiplier : float = 1
 var attack_on_beat_ramping_value : float = 0.0
@@ -123,7 +123,7 @@ func deal_damage():
 	if target_left:
 		deal_damage_to_target(target_left)
 
-func deal_damage_to_target(target : StaticBody2D):
+func deal_damage_to_target(target : Node2D):
 	if on_beat:
 		attack_on_beat_multiplier *= increase_attack_bonus()
 	else:

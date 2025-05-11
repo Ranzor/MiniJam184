@@ -67,7 +67,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nre6u"]
 size = Vector2(122, 386)
 
-[node name="MackerellWizard" type="StaticBody2D" groups=["mackerell"]]
+[node name="MackerellWizard" type="Node2D" groups=["mackerell"]]
 script = ExtResource("1_nre6u")
 projectile_scene = ExtResource("2_ke8kv")
 beam_pattern_a = ExtResource("6_6iq4i")
@@ -87,10 +87,6 @@ animation = &"idle"
 autoplay = "idle"
 frame = 5
 frame_progress = 0.274712
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, 56)
-shape = SubResource("RectangleShape2D_nre6u")
 
 [node name="beat_timer" type="Timer" parent="."]
 
