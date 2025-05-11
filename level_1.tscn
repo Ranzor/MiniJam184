@@ -204,6 +204,7 @@ zoom = Vector2(0.35, 0.35)
 [node name="MackerellWizard" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_ihfcg")]
 z_index = 5
 position = Vector2(608, 926)
+hp_max = 80000
 player = NodePath("../Player")
 mega_pattern_a = ExtResource("6_27bay")
 mega_pattern_b = ExtResource("7_ubhxj")
