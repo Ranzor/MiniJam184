@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bbgdlswpcm6ce"]
+
+[ext_resource type="PackedScene" uid="uid://byuctw61tnfxq" path="res://telegraph_attack_vert_large.tscn" id="2_fvxms"]
+
+[node name="beam_pattern_e" type="Node2D"]
+
+[node name="telegraph_attack_vert9" parent="." instance=ExtResource("2_fvxms")]
+position = Vector2(-397, -187)
+
+[node name="telegraph_attack_vert10" parent="." instance=ExtResource("2_fvxms")]
+position = Vector2(-131, -187)
+
+[node name="telegraph_attack_vert8" parent="." instance=ExtResource("2_fvxms")]
+position = Vector2(1317, -162)
+
+[node name="telegraph_attack_vert11" parent="." instance=ExtResource("2_fvxms")]
+position = Vector2(1576, -162)

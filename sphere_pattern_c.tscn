@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpe3rfsvp2rg0"]
+
+[ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="1_5wpdo"]
+
+[node name="sphere_pattern_c" type="Node2D"]
+
+[node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(20, 1511)
+
+[node name="Telegraphed_Sphere_Large2" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(381, 1523)
+
+[node name="Telegraphed_Sphere_Large3" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(720, 1527)
+
+[node name="Telegraphed_Sphere_Large4" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(1049, 1517)
+
+[node name="Telegraphed_Sphere_Large5" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(1080, 1053)
+
+[node name="Telegraphed_Sphere_Large6" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(807, 1044)
+
+[node name="Telegraphed_Sphere_Large7" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(405, 1044)
+
+[node name="Telegraphed_Sphere_Large8" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(123, 1047)
+
+[node name="Telegraphed_Sphere_Large9" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(-175, 429)
+
+[node name="Telegraphed_Sphere_Large10" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(177, 413)
+
+[node name="Telegraphed_Sphere_Large11" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(544, 419)
+
+[node name="Telegraphed_Sphere_Large12" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(990, 419)
+
+[node name="Telegraphed_Sphere_Large13" parent="." instance=ExtResource("1_5wpdo")]
+position = Vector2(1373, 422)
