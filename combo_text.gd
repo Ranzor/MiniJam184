@@ -15,8 +15,8 @@ func update_combo_text(combo: int) -> void:
 
 	if combo == 0:
 		self.visible = false
-		%TheText.text = ''
-		%Outline.text = ''
+		label1.text = ''
+		label2.text = ''
 		scale = Vector2(3, 3)
 		return
 	else:
@@ -26,8 +26,8 @@ func update_combo_text(combo: int) -> void:
 
 	combo_text += str(combo)
 
-	%Label1.text = combo_text
-	%Label2.text = combo_text
+	label1.text = combo_text
+	label2.text = combo_text
 	#scale += Vector2(combo*0.005, combo*0.005)
 
 func set_labels(combo: int) -> void:
@@ -44,4 +44,3 @@ func set_labels(combo: int) -> void:
 		label1 = %TextOneMega
 		label2 = %TextTwoMega
 	
-
