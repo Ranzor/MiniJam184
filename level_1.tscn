@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://b2bng0xchq8ed" path="res://hp_bar.gd" id="7_bjebc"]
 [ext_resource type="PackedScene" uid="uid://c6ex0s5lubu7c" path="res://combo_text.tscn" id="8_5rr72"]
 [ext_resource type="Script" uid="uid://dgfw58o2t0rdb" path="res://combo_text.gd" id="9_gyffv"]
-[ext_resource type="PackedScene" path="res://combo_timer_bar.tscn" id="10_1pe0h"]
+[ext_resource type="PackedScene" uid="uid://ke1mny3dus28" path="res://combo_timer_bar.tscn" id="10_1pe0h"]
 [ext_resource type="PackedScene" uid="uid://dtou7lhrt785v" path="res://rage_meter.tscn" id="11_1pe0h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_27bay"]
