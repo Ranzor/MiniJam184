@@ -1,19 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bbgdlswpcm6ce"]
+[gd_scene load_steps=3 format=3 uid="uid://bbgdlswpcm6ce"]
 
 [ext_resource type="PackedScene" uid="uid://byuctw61tnfxq" path="res://telegraph_attack_vert_large.tscn" id="2_fvxms"]
+[ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="3_qneoy"]
 
 [node name="beam_pattern_e" type="Node2D"]
 
 [node name="telegraph_attack_vert9" parent="." instance=ExtResource("2_fvxms")]
-position = Vector2(355, -181)
+position = Vector2(138, -184)
 
 [node name="telegraph_attack_vert10" parent="." instance=ExtResource("2_fvxms")]
 position = Vector2(1009, -201)
 
-[node name="telegraph_attack_vert8" parent="." instance=ExtResource("2_fvxms")]
-position = Vector2(1510, 1132)
-rotation = 1.5708
+[node name="Telegraphed_Sphere_Large6" parent="." instance=ExtResource("3_qneoy")]
+position = Vector2(857, 1172)
 
-[node name="telegraph_attack_vert11" parent="." instance=ExtResource("2_fvxms")]
-position = Vector2(1580, 658)
-rotation = 1.5708
+[node name="Telegraphed_Sphere_Large5" parent="." instance=ExtResource("3_qneoy")]
+position = Vector2(591, 1159)
+
+[node name="Telegraphed_Sphere_Large4" parent="." instance=ExtResource("3_qneoy")]
+position = Vector2(321, 1153)
+
+[node name="Telegraphed_Sphere_Large3" parent="." instance=ExtResource("3_qneoy")]
+position = Vector2(335, 719)
+
+[node name="Telegraphed_Sphere_Large2" parent="." instance=ExtResource("3_qneoy")]
+position = Vector2(594, 727)
+
+[node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("3_qneoy")]
+position = Vector2(853, 735)

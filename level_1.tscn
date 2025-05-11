@@ -184,6 +184,7 @@ one_way_collision = true
 [node name="Player" parent="." instance=ExtResource("3_hn12h")]
 z_index = 10
 position = Vector2(-296, 888)
+speed = 500
 jump_force = -800
 double_jump_force = -800
 gravity = 2000

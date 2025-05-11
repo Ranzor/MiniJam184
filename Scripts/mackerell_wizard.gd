@@ -50,7 +50,7 @@ func on_beat():
 	## 1
 	if Beatbox.total_beats == 5:
 		$Sprite2D.play("attack")
-		atk = beam_pattern_a.instantiate()
+		atk = beam_pattern_e.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
