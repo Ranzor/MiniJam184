@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://bpr7fsxaugo8x" path="res://beam_pattern_b.tscn" id="7_ihg1x"]
 [ext_resource type="PackedScene" uid="uid://bbgdlswpcm6ce" path="res://beam_pattern_e.tscn" id="7_itipt"]
 [ext_resource type="Texture2D" uid="uid://vdh5e26cfu1i" path="res://Art/mackerell wizard/mw_idle_0005.png" id="7_v5hhe"]
-[ext_resource type="Script" uid="uid://mk3ehila12mo" path="res://mackerell_hitbox.gd" id="8_ke8kv"]
+[ext_resource type="Script" path="res://mackerell_hitbox.gd" id="8_ke8kv"]
 [ext_resource type="PackedScene" uid="uid://c6oxnfb1y8a4h" path="res://hybrid_pattern_a.tscn" id="8_q0kel"]
 [ext_resource type="PackedScene" uid="uid://b617w7lm7d8u6" path="res://hybrid_pattern_b.tscn" id="9_rrflq"]
 

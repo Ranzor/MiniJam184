@@ -18,10 +18,13 @@ position = Vector2(1414, -147)
 position = Vector2(-345, -180)
 
 [node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("3_wxckc")]
-position = Vector2(184, 948)
+position = Vector2(273, 935)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large2" parent="." instance=ExtResource("3_wxckc")]
-position = Vector2(882, 664)
+position = Vector2(844.25, 657.25)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large3" parent="." instance=ExtResource("3_wxckc")]
-position = Vector2(865, 1291)
+position = Vector2(827.25, 1284.25)
+scale = Vector2(1.5, 1.5)
