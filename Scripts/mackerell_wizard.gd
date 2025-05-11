@@ -40,12 +40,14 @@ enum LANES {TOP, HIGH, MID, LOW}
 @onready var bpm = Beatbox.BPM
 @onready var beat_interval = bpm / 60.0
 var current_pattern = []
-
+var initialized : bool = false
 var tot_dmg : int = 0
 
-var hp : int = hp_max:
+var hp : int = 0:
 	set(value):
-		Global.HP_BAR.update_hp_bar(hp, hp-value)
+		print("HP: ", value)
+		print("Damage: ", hp-value)
+		Global.HP = value
 		hp = value
 
 func _ready() -> void:
@@ -658,6 +660,12 @@ func take_damage(damage: int) -> void:
 	$Sprite2D.play("idle")
 	
 func _process(_delta: float) -> void:
+
+	if not initialized:
+		if hp == 0:
+			hp = hp_max
+			initialized = true
+
 	if player.position.x > position.x:
 		$Sprite2D.flip_h = true
 	else:
