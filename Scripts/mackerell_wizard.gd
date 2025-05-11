@@ -27,6 +27,8 @@ enum LANES {TOP, HIGH, MID, LOW}
 @onready var beat_interval = bpm / 60
 var current_pattern = []
 
+var tot_dmg
+
 var hp : int = hp_max:
 	set(value):
 		hp = value
@@ -316,6 +318,8 @@ func take_damage(damage: int) -> void:
 	# Handle damage logic here
 	print("Mackerell took damage: ", damage)
 	hp -= damage
+	tot_dmg += damage
+	print("Total Damage: ", tot_dmg)
 	$Sprite2D.play("hurt")
 	await $Sprite2D.animation_finished
 	$Sprite2D.play("idle")
