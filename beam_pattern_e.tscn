@@ -5,13 +5,15 @@
 [node name="beam_pattern_e" type="Node2D"]
 
 [node name="telegraph_attack_vert9" parent="." instance=ExtResource("2_fvxms")]
-position = Vector2(-397, -187)
+position = Vector2(355, -181)
 
 [node name="telegraph_attack_vert10" parent="." instance=ExtResource("2_fvxms")]
-position = Vector2(-131, -187)
+position = Vector2(1009, -201)
 
 [node name="telegraph_attack_vert8" parent="." instance=ExtResource("2_fvxms")]
-position = Vector2(1317, -162)
+position = Vector2(1510, 1132)
+rotation = 1.5708
 
 [node name="telegraph_attack_vert11" parent="." instance=ExtResource("2_fvxms")]
-position = Vector2(1576, -162)
+position = Vector2(1580, 658)
+rotation = 1.5708
