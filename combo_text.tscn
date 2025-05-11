@@ -17,15 +17,17 @@ shader_parameter/gradient_mix_amount = -0.1
 
 [node name="combo_text" type="Control"]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 0.155
+anchor_bottom = 0.088
+offset_right = 0.440002
+offset_bottom = -0.0240059
 grow_horizontal = 2
 grow_vertical = 2
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [node name="Outline" type="Label" parent="."]
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> Stashed changes
@@ -151,6 +153,9 @@ offset_bottom = 40.0
 [node name="Outline" type="Label" parent="combo_text_small"]
 unique_name_in_owner = true
 >>>>>>> Stashed changes
+=======
+unique_name_in_owner = true
+>>>>>>> main
 layout_mode = 0
 offset_right = 173.0
 offset_bottom = 61.0
@@ -173,6 +178,7 @@ handle_input_locally = false
 size = Vector2i(177, 57)
 render_target_update_mode = 0
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [node name="text" type="Label" parent="SubViewportContainer/SubViewport"]
@@ -182,6 +188,10 @@ render_target_update_mode = 0
 [node name="TheText" type="Label" parent="combo_text_small/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
 >>>>>>> Stashed changes
+=======
+[node name="TheText" type="Label" parent="SubViewportContainer/SubViewport"]
+unique_name_in_owner = true
+>>>>>>> main
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)

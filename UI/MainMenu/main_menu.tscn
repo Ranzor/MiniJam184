@@ -654,7 +654,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="main_menu" type="MarginContainer" parent="." node_paths=PackedStringArray("credits_screen", "continue_game_button", "new_game_button", "options_button", "quit_button", "toggle_credits_return_button", "toggle_credits_open_button")]
+[node name="main_menu" type="MarginContainer" parent="." node_paths=PackedStringArray("credits_screen", "new_game_button", "quit_button", "toggle_credits_return_button", "toggle_credits_open_button")]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -666,9 +666,7 @@ theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 0
 script = ExtResource("1_fu7sn")
 credits_screen = NodePath("menus/credits")
-continue_game_button = NodePath("")
 new_game_button = NodePath("menus/menu/menuBackground/MarginContainer/buttonContainer/newGameButton")
-options_button = NodePath("")
 quit_button = NodePath("menus/menu/menuBackground/MarginContainer/buttonContainer/quitButton")
 toggle_credits_return_button = NodePath("menus/credits/credits/MarginContainer/exitButton/MarginContainer/toggleCreditsButton")
 toggle_credits_open_button = NodePath("creditsButton/toggleCreditsButton")
