@@ -4,6 +4,8 @@ extends Control
 func _ready() -> void:
 	toggle_rage_meter(0)
 	
+func _physics_process(delta):
+	update_counter(Beatbox.countdown)
 
 func toggle_rage_meter(rage : int) -> void:
 	if rage == 0:
