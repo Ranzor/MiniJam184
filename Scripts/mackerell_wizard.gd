@@ -16,6 +16,20 @@ enum LANES {TOP, HIGH, MID, LOW}
 @export var hybrid_pattern_a : PackedScene
 @export var hybrid_pattern_b : PackedScene
 
+@export var mega_pattern_a : PackedScene
+@export var mega_pattern_b : PackedScene
+@export var mega_pattern_c : PackedScene
+@export var mega_pattern_d : PackedScene
+@export var mega_pattern_e : PackedScene
+@export var mega_pattern_f : PackedScene
+@export var mega_pattern_g : PackedScene
+@export var mega_pattern_h : PackedScene
+@export var mega_pattern_i : PackedScene
+@export var mega_pattern_j : PackedScene
+@export var mega_pattern_k : PackedScene
+@export var mega_pattern_l : PackedScene
+@export var mega_pattern_m : PackedScene
+
 @export var lane_positions: Dictionary = {
 	LANES.TOP: Vector2(0,0),
 	LANES.HIGH: Vector2(0,0),
@@ -50,7 +64,7 @@ func on_beat():
 	## 1
 	if Beatbox.total_beats == 5:
 		$Sprite2D.play("attack")
-		atk = beam_pattern_e.instantiate()
+		atk = mega_pattern_a.instantiate()
 		get_parent().add_child(atk)
 		for i in atk.get_children():
 			i.set_beat = Beatbox.total_beats
@@ -284,7 +298,327 @@ func on_beat():
 			i.set_beat = Beatbox.total_beats
 		await $Sprite2D.animation_finished
 		$Sprite2D.play("idle")
+		
+	if Beatbox.total_beats == 92:
+		$Sprite2D.play("attack")
+		atk = hybrid_pattern_a.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+	## 24
+	if Beatbox.total_beats == 95:
+		$Sprite2D.play("attack")
+		atk = hybrid_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#25
+		
+	if Beatbox.total_beats == 98:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_a.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
 
+		#26
+		
+	if Beatbox.total_beats == 101:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		
+		#27
+		
+	if Beatbox.total_beats == 104:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_a.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+
+		#28
+		
+	if Beatbox.total_beats == 107:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		# 29
+		
+	if Beatbox.total_beats == 111 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_a.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+	if Beatbox.total_beats == 112:
+		$Sprite2D.play("attack")
+		atk = beam_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#30
+		
+	if Beatbox.total_beats == 115 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+	if Beatbox.total_beats == 116:
+		$Sprite2D.play("attack")
+		atk = beam_pattern_c.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		# 29
+		
+	if Beatbox.total_beats == 120 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_a.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+	if Beatbox.total_beats == 121:
+		$Sprite2D.play("attack")
+		atk = beam_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#30
+		
+	if Beatbox.total_beats == 124 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+	if Beatbox.total_beats == 125:
+		$Sprite2D.play("attack")
+		atk = beam_pattern_c.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#31
+		
+	if Beatbox.total_beats == 129 :
+		$Sprite2D.play("attack")
+		atk = sphere_pattern_b.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#32 
+	if Beatbox.total_beats == 132 :
+		$Sprite2D.play("attack")
+		atk = sphere_pattern_c.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		
+		#33 
+	if Beatbox.total_beats == 135 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_i.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#33
+		
+	if Beatbox.total_beats == 137 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_j.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#34
+	if Beatbox.total_beats == 139 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_k.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		#35
+	if Beatbox.total_beats == 142 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_l.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#36
+	if Beatbox.total_beats == 144 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_j.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		#37 
+		
+	if Beatbox.total_beats == 145 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_l.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#37 
+		
+	if Beatbox.total_beats == 146 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_k.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		#38
+		
+	if Beatbox.total_beats == 147 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_i.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		#38
+		
+	if Beatbox.total_beats == 148 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_m.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		
+		#38
+		
+	if Beatbox.total_beats == 149 :
+		$Sprite2D.play("attack")
+		atk = mega_pattern_m.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+		## ENDGAME COUNTDOWN
+	if Beatbox.total_beats == 126:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_c.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+	if Beatbox.total_beats == 127:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_d.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+	if Beatbox.total_beats == 128:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_e.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+		
+	if Beatbox.total_beats == 129:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_f.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+	if Beatbox.total_beats == 130:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_g.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+	if Beatbox.total_beats == 131:
+		$Sprite2D.play("attack")
+		atk = mega_pattern_h.instantiate()
+		get_parent().add_child(atk)
+		for i in atk.get_children():
+			i.set_beat = Beatbox.total_beats
+		await $Sprite2D.animation_finished
+		$Sprite2D.play("idle")
+	if Beatbox.total_beats == 132:
+		$Sprite2D.play("attack")
+		
 	if current_pattern.is_empty() and Beatbox.beat_count == 2:
 		fire_projectile(LANES.values().pick_random())
 	else:

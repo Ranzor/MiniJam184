@@ -1,0 +1,221 @@
+[gd_scene load_steps=2 format=3 uid="uid://3wuwn4twylwn"]
+
+[ext_resource type="PackedScene" uid="uid://ckkjpj603x5j8" path="res://telegraphed_sphere_large.tscn" id="2_x6qv2"]
+
+[node name="mega_pattern_e" type="Node2D"]
+
+[node name="Telegraphed_Sphere_Large11" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1262.5, 790)
+
+[node name="Telegraphed_Sphere_Large12" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(2072.5, 1819)
+
+[node name="Telegraphed_Sphere_Large13" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1805, 1819)
+
+[node name="Telegraphed_Sphere_Large14" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1529, 1815)
+
+[node name="Telegraphed_Sphere_Large21" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1262.5, 295.5)
+
+[node name="Telegraphed_Sphere_Large39" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-370.5, 547.5)
+
+[node name="Telegraphed_Sphere_Large45" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-370.5, 1051.5)
+
+[node name="Telegraphed_Sphere_Large32" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1262.5, 1314.5)
+
+[node name="Telegraphed_Sphere_Large18" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(772.5, 790)
+
+[node name="Telegraphed_Sphere_Large25" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(772.5, 295.5)
+
+[node name="Telegraphed_Sphere_Large63" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(772.5, 1314.5)
+
+[node name="Telegraphed_Sphere_Large16" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1832.5, 790)
+
+[node name="Telegraphed_Sphere_Large23" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1832.5, 295.5)
+
+[node name="Telegraphed_Sphere_Large49" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1832.5, 1314.5)
+
+[node name="Telegraphed_Sphere_Large15" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1542.5, 1024)
+
+[node name="Telegraphed_Sphere_Large22" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1542.5, 529.5)
+
+[node name="Telegraphed_Sphere_Large44" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1542.5, 1548.5)
+
+[node name="Telegraphed_Sphere_Large17" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1019.5, 1024)
+
+[node name="Telegraphed_Sphere_Large20" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(766, 1047)
+
+[node name="Telegraphed_Sphere_Large19" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(420, 1065)
+
+[node name="Telegraphed_Sphere_Large26" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(766.5, 547.5)
+
+[node name="Telegraphed_Sphere_Large27" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(420.5, 565.5)
+
+[node name="Telegraphed_Sphere_Large28" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(777.5, 1568.5)
+
+[node name="Telegraphed_Sphere_Large29" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(431.5, 1586.5)
+
+[node name="Telegraphed_Sphere_Large24" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1019.5, 529.5)
+
+[node name="Telegraphed_Sphere_Large59" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1019.5, 1548.5)
+
+[node name="Telegraphed_Sphere_Large67" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1291, 1566)
+
+[node name="Telegraphed_Sphere_Large68" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1023, 1309)
+
+[node name="Telegraphed_Sphere_Large69" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1274, 1061)
+
+[node name="Telegraphed_Sphere_Large70" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1536, 1292)
+
+[node name="Telegraphed_Sphere_Large71" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1556, 784)
+
+[node name="Telegraphed_Sphere_Large72" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1014, 778)
+
+[node name="Telegraphed_Sphere_Large73" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(167, 812)
+
+[node name="Telegraphed_Sphere_Large74" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-113, 1052)
+
+[node name="Telegraphed_Sphere_Large75" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(149, 1309)
+
+[node name="Telegraphed_Sphere_Large76" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-79, 1569)
+
+[node name="Telegraphed_Sphere_Large77" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-359, 1309)
+
+[node name="Telegraphed_Sphere_Large78" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-584, 1560)
+
+[node name="Telegraphed_Sphere_Large79" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-621, 1064)
+
+[node name="Telegraphed_Sphere_Large80" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-387, 773)
+
+[node name="Telegraphed_Sphere_Large81" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-93, 542)
+
+[node name="Telegraphed_Sphere_Large82" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1302, 562)
+
+[node name="Telegraphed_Sphere_Large83" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1796, 1061)
+
+[node name="Telegraphed_Sphere_Large84" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1796, 1061)
+
+[node name="Telegraphed_Sphere_Large33" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-368.5, 1575)
+
+[node name="Telegraphed_Sphere_Large60" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(163.5, 547.5)
+
+[node name="Telegraphed_Sphere_Large61" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(163.5, 1051.5)
+
+[node name="Telegraphed_Sphere_Large62" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(165.5, 1575)
+
+[node name="Telegraphed_Sphere_Large53" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-896.5, 547.5)
+
+[node name="Telegraphed_Sphere_Large54" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-896.5, 1051.5)
+
+[node name="Telegraphed_Sphere_Large55" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-894.5, 1575)
+
+[node name="Telegraphed_Sphere_Large56" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(2085.5, 547.5)
+
+[node name="Telegraphed_Sphere_Large57" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(2085.5, 1051.5)
+
+[node name="Telegraphed_Sphere_Large58" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(2087.5, 1575)
+
+[node name="Telegraphed_Sphere_Large46" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-136.5, 288.5)
+
+[node name="Telegraphed_Sphere_Large47" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-136.5, 792.5)
+
+[node name="Telegraphed_Sphere_Large48" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-134.5, 1316)
+
+[node name="Telegraphed_Sphere_Large64" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(404.5, 288.5)
+
+[node name="Telegraphed_Sphere_Large65" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(404.5, 792.5)
+
+[node name="Telegraphed_Sphere_Large66" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(406.5, 1316)
+
+[node name="Telegraphed_Sphere_Large50" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-614.5, 288.5)
+
+[node name="Telegraphed_Sphere_Large51" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-614.5, 792.5)
+
+[node name="Telegraphed_Sphere_Large52" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-612.5, 1316)
+
+[node name="Telegraphed_Sphere_Large34" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-900, 1847)
+
+[node name="Telegraphed_Sphere_Large35" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-633, 1847)
+
+[node name="Telegraphed_Sphere_Large36" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-361, 1847)
+
+[node name="Telegraphed_Sphere_Large37" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(-89.5, 1847)
+
+[node name="Telegraphed_Sphere_Large38" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(177.5, 1847)
+
+[node name="Telegraphed_Sphere_Large40" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(449.5, 1847)
+
+[node name="Telegraphed_Sphere_Large41" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(716.5, 1847)
+
+[node name="Telegraphed_Sphere_Large42" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(983.5, 1847)
+
+[node name="Telegraphed_Sphere_Large43" parent="." instance=ExtResource("2_x6qv2")]
+position = Vector2(1255.5, 1847)
