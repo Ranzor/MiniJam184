@@ -652,6 +652,7 @@ func take_damage(damage: int) -> void:
 	# Handle damage logic here
 	hp -= damage
 	tot_dmg += damage
+	print("Total Damage: ", tot_dmg)
 	$Sprite2D.play("hurt")
 	await $Sprite2D.animation_finished
 	$Sprite2D.play("idle")
