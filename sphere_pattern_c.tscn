@@ -5,40 +5,40 @@
 [node name="sphere_pattern_c" type="Node2D"]
 
 [node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(20, 1511)
+position = Vector2(20, 550)
 
 [node name="Telegraphed_Sphere_Large2" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(381, 1523)
+position = Vector2(439, 525)
 
 [node name="Telegraphed_Sphere_Large3" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(720, 1527)
+position = Vector2(812, 524)
 
 [node name="Telegraphed_Sphere_Large4" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(1049, 1517)
+position = Vector2(1204, 544)
 
 [node name="Telegraphed_Sphere_Large5" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(1080, 1053)
+position = Vector2(1119, 1053)
 
 [node name="Telegraphed_Sphere_Large6" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(807, 1044)
+position = Vector2(758, 1044)
 
 [node name="Telegraphed_Sphere_Large7" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(405, 1044)
+position = Vector2(511, 1044)
 
 [node name="Telegraphed_Sphere_Large8" parent="." instance=ExtResource("1_5wpdo")]
 position = Vector2(123, 1047)
 
 [node name="Telegraphed_Sphere_Large9" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(-175, 429)
+position = Vector2(-267, 800.5)
 
 [node name="Telegraphed_Sphere_Large10" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(177, 413)
+position = Vector2(310, 856)
 
 [node name="Telegraphed_Sphere_Large11" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(544, 419)
+position = Vector2(623, 774)
 
 [node name="Telegraphed_Sphere_Large12" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(990, 419)
+position = Vector2(927, 839)
 
 [node name="Telegraphed_Sphere_Large13" parent="." instance=ExtResource("1_5wpdo")]
-position = Vector2(1373, 422)
+position = Vector2(1502, 793.5)

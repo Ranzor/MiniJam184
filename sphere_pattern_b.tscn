@@ -5,25 +5,29 @@
 [node name="sphere_pattern_b" type="Node2D"]
 
 [node name="Telegraphed_Sphere_Large" parent="." instance=ExtResource("1_n1r61")]
-position = Vector2(-281, 567)
+position = Vector2(1235.25, 639.5)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large2" parent="." instance=ExtResource("1_n1r61")]
-position = Vector2(-295, 878)
+position = Vector2(-434.75, 1028.5)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large3" parent="." instance=ExtResource("1_n1r61")]
-position = Vector2(139, 1043)
+position = Vector2(-33.75, 1024.25)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large4" parent="." instance=ExtResource("1_n1r61")]
-position = Vector2(145, 752)
+position = Vector2(357.375, 1052.5)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large5" parent="." instance=ExtResource("1_n1r61")]
-position = Vector2(944, 738)
+position = Vector2(865.25, 630.5)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large6" parent="." instance=ExtResource("1_n1r61")]
-position = Vector2(941, 1032)
-
-[node name="Telegraphed_Sphere_Large7" parent="." instance=ExtResource("1_n1r61")]
-position = Vector2(1800, 1100)
+position = Vector2(876.5, 1024.25)
+scale = Vector2(1.5, 1.5)
 
 [node name="Telegraphed_Sphere_Large8" parent="." instance=ExtResource("1_n1r61")]
-position = Vector2(1791, 823)
+position = Vector2(1206.25, 1019.5)
+scale = Vector2(1.5, 1.5)
