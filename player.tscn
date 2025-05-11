@@ -150,11 +150,11 @@ size = Vector2(129.5, 133)
 script = ExtResource("1_4flbx")
 jump_force = -500
 double_jump_force = -500
-beat_hit_delay = 0
 
 [node name="rage_4_particle" type="CPUParticles2D" parent="."]
-visible = false
+unique_name_in_owner = true
 position = Vector2(0, 40)
+emitting = false
 amount = 400
 texture = ExtResource("2_pbfsw")
 lifetime = 2.0
@@ -171,7 +171,7 @@ scale_amount_curve = SubResource("Curve_5tmop")
 color_ramp = SubResource("Gradient_7ahtn")
 
 [node name="rage_1_particle" type="CPUParticles2D" parent="."]
-visible = false
+unique_name_in_owner = true
 position = Vector2(0, 40)
 amount = 50
 texture = ExtResource("2_pbfsw")
@@ -190,8 +190,9 @@ scale_amount_curve = SubResource("Curve_5tmop")
 color_ramp = SubResource("Gradient_7ahtn")
 
 [node name="rage_3_particle" type="CPUParticles2D" parent="."]
-visible = false
+unique_name_in_owner = true
 position = Vector2(0, 40)
+emitting = false
 amount = 200
 texture = ExtResource("2_pbfsw")
 lifetime = 2.0
@@ -209,7 +210,9 @@ scale_amount_curve = SubResource("Curve_5tmop")
 color_ramp = SubResource("Gradient_7ahtn")
 
 [node name="rage_2_particle" type="CPUParticles2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(0, 40)
+emitting = false
 amount = 150
 texture = ExtResource("2_pbfsw")
 lifetime = 2.0
