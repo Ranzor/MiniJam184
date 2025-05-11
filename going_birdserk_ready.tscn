@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://fcsr8sqttpeq" path="res://Scripts/going_birdserk_ready.gd" id="1_qcxps"]
 [ext_resource type="FontFile" uid="uid://cnxkd2vhp83sj" path="res://Art/Fonts/SourceSerif4-VariableFont_opsz,wght.ttf" id="1_wo78n"]
 [ext_resource type="AudioStream" uid="uid://bap3e6g0ccnl7" path="res://Audio/blip.wav" id="3_qmnal"]
-[ext_resource type="AudioStream" uid="uid://0p2vudnrjdie" path="res://Audio/blop.wav" id="4_pn77o"]
+[ext_resource type="AudioStream" uid="uid://ibmhjtdmig7y" path="res://Audio/seagull-2-89447.mp3" id="4_qmnal"]
 
 [sub_resource type="Animation" id="Animation_xd8t6"]
 length = 0.001
@@ -421,4 +421,4 @@ autoplay = "loading"
 stream = ExtResource("3_qmnal")
 
 [node name="blop" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_pn77o")
+stream = ExtResource("4_qmnal")
