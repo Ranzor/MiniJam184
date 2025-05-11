@@ -37,6 +37,7 @@ var rage_meter : Control
 
 func _ready() -> void:
 	Beatbox.connect("beat", on_beat_toggle)
+	Global.PLAYER = self
 
 func on_beat_toggle():
 	on_beat = true
@@ -101,10 +102,16 @@ func check_rage():
 
 	if Beatbox.countdown <= 45 and rage_counter == 0:
 		rage_counter += 1
+		%rage_1_particle.emitting = false
+		%rage_2_particle.emitting = true
 	elif Beatbox.countdown <= 30 and rage_counter == 1:
 		rage_counter += 1
+		%rage_2_particle.emitting = false
+		%rage_3_particle.emitting = true
 	elif Beatbox.countdown <= 15 and rage_counter == 2:
 		rage_counter += 1
+		%rage_3_particle.emitting = false
+		%rage_4_particle.emitting = true
 
 	rage_meter.toggle_rage_meter(rage_counter)
 

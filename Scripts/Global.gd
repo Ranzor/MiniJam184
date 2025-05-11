@@ -12,3 +12,5 @@ var HP_BAR : Control
 var MAX_HP : int = 20
 var COMBO_TEXT : Control
 var RAGEMETER : Control
+var PLAYER : Node2D
+var BEATBOX : CharacterBody2D

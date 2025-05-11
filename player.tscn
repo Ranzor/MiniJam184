@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bnf3w55vhwemh" path="res://Scripts/player.gd" id="1_4flbx"]
 [ext_resource type="Texture2D" uid="uid://6wkwkty35tbm" path="res://Art/Particles/rage_circle.png" id="2_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://cinrafn7y3aaf" path="res://Art/Player/player_attack_0001.png" id="2_pylmc"]
-[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="3_5tmop"]
+[ext_resource type="Shader" uid="uid://dyou6ehuchptb" path="res://Shaders/outline.gdshader" id="3_5tmop"]
 [ext_resource type="Texture2D" uid="uid://cycbb4ux5t23d" path="res://Art/Player/player_run_0000.png" id="3_606se"]
 [ext_resource type="Texture2D" uid="uid://87caycmjso82" path="res://Art/Player/player_attack_0002.png" id="3_pbfsw"]
 [ext_resource type="Texture2D" uid="uid://bihwae42nbdnl" path="res://Art/Player/player_jump_0001.png" id="3_u1c27"]
@@ -135,8 +135,9 @@ jump_force = -500
 double_jump_force = -500
 
 [node name="rage_4_particle" type="CPUParticles2D" parent="."]
-visible = false
+unique_name_in_owner = true
 position = Vector2(0, 40)
+emitting = false
 amount = 400
 texture = ExtResource("2_pbfsw")
 lifetime = 2.0
@@ -153,7 +154,7 @@ scale_amount_curve = SubResource("Curve_5tmop")
 color_ramp = SubResource("Gradient_7ahtn")
 
 [node name="rage_1_particle" type="CPUParticles2D" parent="."]
-visible = false
+unique_name_in_owner = true
 position = Vector2(0, 40)
 amount = 50
 texture = ExtResource("2_pbfsw")
@@ -172,8 +173,9 @@ scale_amount_curve = SubResource("Curve_5tmop")
 color_ramp = SubResource("Gradient_7ahtn")
 
 [node name="rage_3_particle" type="CPUParticles2D" parent="."]
-visible = false
+unique_name_in_owner = true
 position = Vector2(0, 40)
+emitting = false
 amount = 200
 texture = ExtResource("2_pbfsw")
 lifetime = 2.0
@@ -191,7 +193,9 @@ scale_amount_curve = SubResource("Curve_5tmop")
 color_ramp = SubResource("Gradient_7ahtn")
 
 [node name="rage_2_particle" type="CPUParticles2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(0, 40)
+emitting = false
 amount = 150
 texture = ExtResource("2_pbfsw")
 lifetime = 2.0
