@@ -131,8 +131,6 @@ func deal_damage_to_target(target : Node2D):
 		attack_on_beat_ramping_value = 0
 		Global.combo += 1
 
-	Global.combo += 10
-
 	target.take_damage(base_damage + attack_on_beat_multiplier)
 	
 func increase_attack_bonus() -> float:

@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://byuctw61tnfxq"]
+[gd_scene load_steps=5 format=3 uid="uid://byuctw61tnfxq"]
 
-[ext_resource type="Script" path="res://telegraph_attack_vert_large.gd" id="1_aex36"]
+[ext_resource type="Script" uid="uid://cmovgkechlv82" path="res://telegraph_attack_vert_large.gd" id="1_aex36"]
 [ext_resource type="Texture2D" uid="uid://byp36vsh0x0uy" path="res://Art/mackerell wizard/mw_beams_telegraphs.png" id="1_ukghf"]
 [ext_resource type="Texture2D" uid="uid://eedgxnlvpcki" path="res://Art/mackerell wizard/mw_beams_projectiles.png" id="3_aex36"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aex36"]
+size = Vector2(247, 1998)
 
 [node name="telegraph_attack_vert" type="Sprite2D"]
 texture = ExtResource("3_aex36")
@@ -81,3 +84,12 @@ position = Vector2(0, 1826)
 texture = ExtResource("1_ukghf")
 region_enabled = true
 region_rect = Rect2(3.90382, 373.687, 250.939, 182.57)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 913)
+shape = SubResource("RectangleShape2D_aex36")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
