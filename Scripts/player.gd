@@ -18,7 +18,7 @@ var can_double_jump = false
 
 var beat_timer = 0.0
 @onready var bpm = Beatbox.BPM
-@onready var beat_interval : float = bpm / 60
+@onready var beat_interval : float = bpm / 60.0
 
 var is_attacking = false
 
@@ -27,8 +27,8 @@ var target_left : StaticBody2D
 var attacking_right : bool = true
 var attack_on_beat_multiplier : float = 1
 var attack_on_beat_ramping_value : float = 0.0
-var attacks_on_beat : int = 0
 
+var combo_timer_bar : Control
 var on_beat = false
 var beat : int = 1
 
@@ -124,27 +124,22 @@ func deal_damage():
 		deal_damage_to_target(target_left)
 
 func deal_damage_to_target(target : StaticBody2D):
-	on_beat = true
 	if on_beat:
 		attack_on_beat_multiplier *= increase_attack_bonus()
 	else:
 		attack_on_beat_multiplier = 0
 		attack_on_beat_ramping_value = 0
-		attacks_on_beat = 0
-		Global.combo = attacks_on_beat
+		Global.combo = 0
 
 	target.take_damage(base_damage + attack_on_beat_multiplier)
 	
 func increase_attack_bonus() -> float:
-	attacks_on_beat += 1
-	Global.combo = attacks_on_beat
+	Global.combo += 1
 
-	if attacks_on_beat % attack_on_beat_ramping_pace == 0:
+	if Global.combo % attack_on_beat_ramping_pace == 0:
 		attack_on_beat_ramping_value += attack_on_beat_ramping_increase
 
-	print(str(attacks_on_beat) + ' - ' + str(attack_on_beat_ramping_value) + ' - ' + str(attack_on_beat_multiplier_value))
-
-	attack_on_beat_multiplier = attack_on_beat_multiplier_base + (attack_on_beat_multiplier_value * (attacks_on_beat+attack_on_beat_ramping_value)) * (1 + (rage_counter*rage_multiplier_modifier))
+	attack_on_beat_multiplier = attack_on_beat_multiplier_base + (attack_on_beat_multiplier_value * (Global.combo+attack_on_beat_ramping_value)) * (1 + (rage_counter*rage_multiplier_modifier))
 	
 	return attack_on_beat_ramping_value + attack_on_beat_multiplier_value
 

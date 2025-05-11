@@ -191,6 +191,7 @@ text = "x8999"
 
 [node name="combo_text_small" type="Control" parent="."]
 unique_name_in_owner = true
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -217,7 +218,7 @@ offset_bottom = 57.0
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(177, 57)
-render_target_update_mode = 4
+render_target_update_mode = 0
 
 [node name="TextTwoSmall" type="Label" parent="combo_text_small/SubViewportContainer/SubViewport"]
 unique_name_in_owner = true
