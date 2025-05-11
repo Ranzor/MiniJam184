@@ -2,6 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://cfmgr4vlkqaf1" path="res://Art/Environment/plank.png" id="1_pkcor"]
 
+[sub_resource type="Animation" id="Animation_uw3nf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.15708]
+}
+
 [sub_resource type="Animation" id="Animation_n00cy"]
 resource_name = "slight vibble"
 length = 5.0
@@ -17,21 +32,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [-0.139626, 0.15708, -0.139626]
-}
-
-[sub_resource type="Animation" id="Animation_uw3nf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.15708]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ljfbf"]
