@@ -1,0 +1,103 @@
+[gd_scene load_steps=11 format=3 uid="uid://dtou7lhrt785v"]
+
+[ext_resource type="Script" uid="uid://dlyqvtsln358v" path="res://rage_meter.gd" id="1_pyr81"]
+[ext_resource type="Texture2D" uid="uid://drdlok4vl1h6w" path="res://Art/UX/rage_icon.png" id="2_nvd6h"]
+[ext_resource type="FontFile" uid="uid://d4a6stgcu2hxo" path="res://Art/Fonts/Inter-Black.otf" id="3_y6mws"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sof0w"]
+atlas = ExtResource("2_nvd6h")
+region = Rect2(117.195, 49.8029, 121, 114.95)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggavl"]
+atlas = ExtResource("2_nvd6h")
+region = Rect2(243.035, 52.2229, 80.465, 107.69)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ubhxj"]
+load_path = "res://.godot/imported/rage_icon.png-188c55154e38271830d3b938793073dc.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65or1"]
+atlas = SubResource("CompressedTexture2D_ubhxj")
+region = Rect2(318.218, 62.5079, 63.4578, 105.875)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhbbi"]
+atlas = SubResource("CompressedTexture2D_ubhxj")
+region = Rect2(379.698, 62.5079, 84.1619, 105.875)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjkv5"]
+atlas = SubResource("CompressedTexture2D_ubhxj")
+region = Rect2(462.31, 54.8226, 114.394, 113.56)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00ld1"]
+atlas = ExtResource("2_nvd6h")
+region = Rect2(0, 157.195, 235.085, 183.805)
+
+[node name="RageMeter" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_pyr81")
+
+[node name="RageBg" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 37.0
+offset_right = 124.0
+offset_bottom = 151.0
+texture = SubResource("AtlasTexture_sof0w")
+
+[node name="Rage_0" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 13.0
+offset_top = 43.0
+offset_right = 93.0
+offset_bottom = 150.0
+texture = SubResource("AtlasTexture_ggavl")
+
+[node name="Rage_1" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 25.0
+offset_top = 52.0
+offset_right = 88.0
+offset_bottom = 157.0
+texture = SubResource("AtlasTexture_65or1")
+
+[node name="Rage_2" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 21.0
+offset_top = 52.0
+offset_right = 105.0
+offset_bottom = 157.0
+texture = SubResource("AtlasTexture_lhbbi")
+
+[node name="Rage_3" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 4.0
+offset_top = 47.0
+offset_right = 118.0
+offset_bottom = 160.0
+texture = SubResource("AtlasTexture_gjkv5")
+
+[node name="RageMeter" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 235.0
+offset_bottom = 183.0
+texture = SubResource("AtlasTexture_00ld1")
+
+[node name="Counter" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 133.0
+offset_top = 75.0
+offset_right = 187.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("3_y6mws")
+theme_override_font_sizes/font_size = 38
+text = "60"

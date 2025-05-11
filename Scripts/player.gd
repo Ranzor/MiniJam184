@@ -12,6 +12,7 @@ extends CharacterBody2D
 @export var attack_on_beat_multiplier_base = 1.0
 @export var attack_on_beat_ramping_pace = 5
 @export var attack_on_beat_ramping_increase = 0.5
+@export var rage_multiplier_modifier = 1
 
 var can_double_jump = false
 
@@ -30,6 +31,9 @@ var attacks_on_beat : int = 0
 
 var on_beat = false
 var beat : int = 1
+
+var rage_counter : int = 1
+var rage_meter : Control
 
 func _ready() -> void:
 	Beatbox.connect("beat", on_beat_toggle)
@@ -88,6 +92,22 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 
+	check_rage()
+
+func check_rage():
+
+	if rage_meter == null:
+		rage_meter = Global.RAGEMETER
+
+	if Beatbox.countdown <= 45 and rage_counter == 0:
+		rage_counter += 1
+	elif Beatbox.countdown <= 30 and rage_counter == 1:
+		rage_counter += 1
+	elif Beatbox.countdown <= 15 and rage_counter == 2:
+		rage_counter += 1
+
+	rage_meter.toggle_rage_meter(rage_counter)
+
 func deal_damage():
 	if target_right:
 		deal_damage_to_target(target_right)
@@ -114,7 +134,7 @@ func increase_attack_bonus() -> float:
 
 	print(str(attacks_on_beat) + ' - ' + str(attack_on_beat_ramping_value) + ' - ' + str(attack_on_beat_multiplier_value))
 
-	attack_on_beat_multiplier = attack_on_beat_multiplier_base + (attack_on_beat_multiplier_value * (attacks_on_beat+attack_on_beat_ramping_value))
+	attack_on_beat_multiplier = attack_on_beat_multiplier_base + (attack_on_beat_multiplier_value * (attacks_on_beat+attack_on_beat_ramping_value)) * (1 + (rage_counter*rage_multiplier_modifier))
 	
 	return attack_on_beat_ramping_value + attack_on_beat_multiplier_value
 

@@ -12,7 +12,6 @@ var audio_position = 0.0
 var timer
 var countdown = 60
 
-
 func _ready() -> void:
 	timer = Timer.new()
 	timer.connect("timeout",_on_timer_timeout)
@@ -22,6 +21,7 @@ func _ready() -> void:
 func _on_timer_timeout():
 	countdown -= 1
 	$Label2.text = str(countdown)
+	Global.RAGEMETER.update_counter(countdown)
 	if countdown <= 0:
 		AudioManager.stop_music()
 		SceneTransition.transition_to_scene("res://UI/MainMenu/main_menu.tscn")
