@@ -18,4 +18,4 @@ var COMBO_TEXT : Control
 var RAGEMETER : Control
 var PLAYER : Node2D
 var BEATBOX : CharacterBody2D
-var KNOCKBACK = 700
+var KNOCKBACK = 550

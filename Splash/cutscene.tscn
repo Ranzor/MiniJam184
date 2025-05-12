@@ -1,0 +1,622 @@
+[gd_scene load_steps=11 format=3 uid="uid://brgkaboonn282"]
+
+[ext_resource type="Script" uid="uid://2mv54m1ej626" path="res://Splash/splash.gd" id="1_gddje"]
+[ext_resource type="Texture2D" uid="uid://b58a61846vjv3" path="res://Art/Cutscene/cutscene_frame_1.png" id="2_gddje"]
+[ext_resource type="FontFile" uid="uid://chy45ufqervfb" path="res://Art/Fonts/SourceSerif4-Italic-VariableFont_opsz,wght.ttf" id="3_jlddc"]
+[ext_resource type="Texture2D" uid="uid://cnx0xo2v5y1em" path="res://Art/Cutscene/cutscene_frame_2.png" id="3_xik0i"]
+[ext_resource type="Texture2D" uid="uid://wlq4iuggiy25" path="res://Art/Cutscene/cutscene_frame_3.png" id="4_jlddc"]
+[ext_resource type="Texture2D" uid="uid://cbsbhj6kmv7xi" path="res://Art/Cutscene/cutscene_frame_4.png" id="5_xu5ng"]
+
+[sub_resource type="Animation" id="Animation_el3v4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CutsceneFrame1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CutsceneFrame1/Label 1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CutsceneFrame1/Label 2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CutsceneFrame1/Label 3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CutsceneFrame2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CutsceneFrame2:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CutsceneFrame2/Label 1:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CutsceneFrame2/Label 2:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CutsceneFrame2/Label 3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CutsceneFrame3:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("CutsceneFrame3/Label 1:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CutsceneFrame3/Label 3:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("CutsceneFrame3/Label 2:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("CutsceneFrame4:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_74eti"]
+resource_name = "load_splash_screen"
+length = 5.0
+
+[sub_resource type="Animation" id="Animation_xik0i"]
+resource_name = "CUTSCENE"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CutsceneFrame1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CutsceneFrame1/Label 1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CutsceneFrame1/Label 2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CutsceneFrame1/Label 3:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.33, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CutsceneFrame2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.32, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/path = NodePath("CutsceneFrame2/Label 1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = false
+tracks/6/path = NodePath("CutsceneFrame2/Label 2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 6, 7.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CutsceneFrame2/Label 3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 7.5, 9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("CutsceneFrame3:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.31, 9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("CutsceneFrame3/Label 1:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 9, 10.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = false
+tracks/10/path = NodePath("CutsceneFrame3/Label 2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 10.5, 12),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("CutsceneFrame3/Label 3:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 12),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = false
+tracks/12/path = NodePath("CutsceneFrame4:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 13.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = false
+tracks/13/path = NodePath("CutsceneFrame4/Label 4:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("CutsceneFrame2:modulate")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r8bb4"]
+_data = {
+&"CUTSCENE": SubResource("Animation_xik0i"),
+&"RESET": SubResource("Animation_el3v4"),
+&"load_splash_screen": SubResource("Animation_74eti")
+}
+
+[node name="splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="splash" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gddje")
+
+[node name="CutsceneFrame1" type="Sprite2D" parent="splash"]
+position = Vector2(575, 325)
+texture = ExtResource("2_gddje")
+
+[node name="Label 1" type="Label" parent="splash/CutsceneFrame1"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -699.5
+offset_top = -359.0
+offset_right = -452.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "Outlaw, Warrior, Pirate"
+horizontal_alignment = 1
+
+[node name="Label 2" type="Label" parent="splash/CutsceneFrame1"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -699.5
+offset_top = -359.0
+offset_right = -452.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "He wanders alone, accross the abandoned shore"
+horizontal_alignment = 1
+
+[node name="Label 3" type="Label" parent="splash/CutsceneFrame1"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -699.5
+offset_top = -359.0
+offset_right = -452.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "Amongst all the things he is, one comes first of all"
+horizontal_alignment = 1
+
+[node name="CutsceneFrame2" type="Sprite2D" parent="splash"]
+position = Vector2(575, 325)
+texture = ExtResource("3_xik0i")
+
+[node name="Label 1" type="Label" parent="splash/CutsceneFrame2"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -829.5
+offset_top = -359.0
+offset_right = -322.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "Angry"
+horizontal_alignment = 1
+
+[node name="Label 2" type="Label" parent="splash/CutsceneFrame2"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -829.5
+offset_top = -359.0
+offset_right = -322.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "The world is his enemy"
+horizontal_alignment = 1
+
+[node name="Label 3" type="Label" parent="splash/CutsceneFrame2"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -829.5
+offset_top = -359.0
+offset_right = -322.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "His wings filled with rage"
+horizontal_alignment = 1
+
+[node name="CutsceneFrame3" type="Sprite2D" parent="splash"]
+visible = false
+position = Vector2(575, 325)
+texture = ExtResource("4_jlddc")
+
+[node name="Label 1" type="Label" parent="splash/CutsceneFrame3"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -829.5
+offset_top = -359.0
+offset_right = -322.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "Those who survive these shores know well"
+horizontal_alignment = 1
+
+[node name="Label 2" type="Label" parent="splash/CutsceneFrame3"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -829.5
+offset_top = -359.0
+offset_right = -322.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "If you meet those who follow the path of the gull, only one thing is certain"
+horizontal_alignment = 1
+
+[node name="Label 3" type="Label" parent="splash/CutsceneFrame3"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -829.5
+offset_top = -359.0
+offset_right = -322.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "In under a minute"
+horizontal_alignment = 1
+
+[node name="CutsceneFrame4" type="Sprite2D" parent="splash"]
+position = Vector2(575, 325)
+texture = ExtResource("5_xu5ng")
+
+[node name="Label 4" type="Label" parent="splash/CutsceneFrame4"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -829.5
+offset_top = -359.0
+offset_right = -322.5
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("3_jlddc")
+theme_override_font_sizes/font_size = 25
+text = "One of you wil be dead"
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="splash"]
+libraries = {
+&"": SubResource("AnimationLibrary_r8bb4")
+}
+autoplay = "CUTSCENE"
+
+[connection signal="animation_finished" from="splash/AnimationPlayer" to="splash" method="_on_animation_player_animation_finished"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwkgyiuhhdqsm"]
+[gd_scene load_steps=5 format=3 uid="uid://dwkgyiuhhdqsm"]
 
+[ext_resource type="PackedScene" uid="uid://dnos38cp6gtl3" path="res://Art/Particles/combo_small_particle.tscn" id="1_q3pri"]
 [ext_resource type="Texture2D" uid="uid://yif6pdjxx6rh" path="res://Art/Particles/small_circle.png" id="1_x438m"]
 
 [sub_resource type="Curve" id="Curve_q3pri"]
@@ -12,29 +13,14 @@ colors = PackedColorArray(1, 1, 1, 0, 0, 0, 0, 1, 0.767025, 2.52686e-06, 9.62615
 
 [node name="combo_increase" type="Node2D"]
 
-[node name="combo_small" type="CPUParticles2D" parent="."]
-emitting = false
-amount = 50
-texture = ExtResource("1_x438m")
-lifetime = 0.5
-one_shot = true
-explosiveness = 1.0
-local_coords = true
-direction = Vector2(1, 1)
-spread = 180.0
-gravity = Vector2(0, 0)
-initial_velocity_min = 40.0
-initial_velocity_max = 40.0
-scale_amount_max = 2.0
-scale_amount_curve = SubResource("Curve_q3pri")
-color_ramp = SubResource("Gradient_q3pri")
+[node name="combo_small" parent="." instance=ExtResource("1_q3pri")]
+visible = false
 
 [node name="combo_medium" type="CPUParticles2D" parent="."]
-emitting = false
+visible = false
 amount = 100
 texture = ExtResource("1_x438m")
 lifetime = 0.5
-one_shot = true
 explosiveness = 1.0
 local_coords = true
 direction = Vector2(1, 1)
@@ -64,6 +50,7 @@ scale_amount_curve = SubResource("Curve_q3pri")
 color_ramp = SubResource("Gradient_q3pri")
 
 [node name="combo_mega" type="CPUParticles2D" parent="."]
+visible = false
 amount = 300
 texture = ExtResource("1_x438m")
 lifetime = 0.5

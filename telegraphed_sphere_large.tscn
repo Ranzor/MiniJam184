@@ -8,6 +8,7 @@
 radius = 130.035
 
 [node name="Telegraphed_Sphere_Large" type="Sprite2D"]
+z_index = 15
 texture = ExtResource("1_0umrf")
 region_enabled = true
 region_rect = Rect2(227, 6.5, 255, 251)

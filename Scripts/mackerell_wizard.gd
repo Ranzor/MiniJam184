@@ -671,5 +671,6 @@ func _process(_delta: float) -> void:
 	else:
 		$Sprite2D.flip_h = false
 	if hp <= 0:
+		Beatbox.timer.stop()
 		SceneTransition.transition_to_scene("res://victory_screen.tscn")
 		AudioManager.stop_music()
